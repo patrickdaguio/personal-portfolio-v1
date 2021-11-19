@@ -1,0 +1,15 @@
+{
+	"name": "personal-portfolio-v1",
+	"version": "1.0.0",
+	"description": "Personal Portfolio Website V1",
+	"main": "index.js",
+	"scripts": {
+		"dev": "parcel src/index.html",
+		"build": "parcel src public/index.html"
+	},
+	"author": "Patrick Daguio patrickdaguio@outlook.com",
+	"license": "ISC",
+	"dependencies": {
+		"particles.js": "^2.0.0"
+	}
+}
