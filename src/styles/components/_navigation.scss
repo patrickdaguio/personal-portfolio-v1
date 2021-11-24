@@ -1,0 +1,28 @@
+.header {
+	&__nav {
+		&__list {
+			display: flex;
+			&__item {
+				&:not(:last-child) {
+					margin-right: 3em;
+				}
+			}
+			&__link {
+				transition: 0.3s;
+				@include font-source(
+					$heading-font-family,
+					1.25em,
+					$base-font-weight,
+					$secondary-text
+				);
+				letter-spacing: $spacing;
+				&--active {
+					color: $primary-text;
+				}
+				&:hover {
+					color: $primary-text;
+				}
+			}
+		}
+	}
+}

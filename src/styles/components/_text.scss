@@ -1,0 +1,14 @@
+.text {
+	@include font-source(
+		$base-font-family,
+		1em,
+		$light-font-weight,
+		$primary-text
+	);
+	&--highlight {
+		color: $highlight-text;
+	}
+	&--secondary {
+		color: $secondary-text;
+	}
+}

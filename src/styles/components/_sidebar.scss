@@ -1,0 +1,51 @@
+.sidebar {
+	position: fixed;
+	bottom: 0;
+	&::after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 90px;
+		margin: 0px auto;
+		background-color: $primary-text;
+	}
+	&--left {
+		left: 94px;
+	}
+	&--right {
+		right: 94px;
+	}
+	&__email {
+		@include font-source(
+			$base-font-family,
+			0.9em,
+			$light-font-weight,
+			$primary-text
+		);
+		writing-mode: vertical-lr;
+		padding: 1.5em 0em;
+		letter-spacing: $spacing;
+		cursor: pointer;
+		transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+		&:hover {
+			transform: translateY(-3px);
+			color: $highlight-text;
+		}
+	}
+	&__item {
+		transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+		&:hover {
+			transform: translateY(-3px);
+			a {
+				svg {
+					* {
+						fill: $highlight-text;
+					}
+				}
+			}
+		}
+		&:last-child {
+			padding: 1.5em 0em;
+		}
+	}
+}

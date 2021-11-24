@@ -9,7 +9,8 @@
 	},
 	"author": "Patrick Daguio patrickdaguio@outlook.com",
 	"license": "ISC",
-	"dependencies": {
-		"particles.js": "^2.0.0"
+	"dependencies": {},
+	"devDependencies": {
+		"sass": "^1.43.4"
 	}
 }

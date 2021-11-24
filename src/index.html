@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,17 +7,84 @@
 		<title>Patrick Daguio</title>
 
 		<link rel="apple-touch-icon" sizes="180x180" href="../public/favicon/apple-touch-icon.png"/>
-		<link rel="icon" ="image/png" sizes="32x32" href="../public/favicon/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="../public/favicon/favicon-32x32.png"/>
 		<link rel="icon" type="image/png" sizes="16x16" href="../public/favicon/favicon-16x16.png"/>
 
 		<link rel="stylesheet" href="../src/styles/style.scss"/>
+		
 	</head>
 
 	<body>
-        <h1>Patrick Daguio</h1>
-        <h3>Hello World</h3>
-    </body>
+		<header class="header">
+			<div class="header__wrapper">
+				<a href="#" class="header__logo"><h1>PD</h1></a>
+				<nav class="header__nav">
+					<ul class="header__nav__list">
+						<li class="header__nav__list__item">
+							<a href="#" class="header__nav__list__link header__nav__list__link--active">&#60;Home/&#62;</a>
+						</li>
+						<li class="header__nav__list__item">
+							<a href="#about" class="header__nav__list__link">&#60;About/&#62;</a>
+						</li>
+						<li class="header__nav__list__item">
+							<a href="#portfolio" class="header__nav__list__link">&#60;Portfolio/&#62;</a>
+						</li>
+						<li class="header__nav__list__item">
+							<a href="#contact" class="header__nav__list__link">&#60;Contact/&#62;</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-    
-    <script src="../src/scripts/index.js"></script>
+		<aside class="sidebar sidebar--left">
+			<ul>
+				<li class="sidebar__item">
+					<a href="https://github.com/patrickdaguio" target="_blank">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.1146 5.90134C20.0334 5.79355 19.9466 5.69008 19.8546 5.59134C19.9471 5.34478 20.0174 5.09043 20.0646 4.83134C20.2039 3.88353 20.0829 2.91568 19.7146 2.03134C19.7146 2.03134 18.5946 1.68134 16.0246 3.41134C14.9335 3.11007 13.8065 2.95868 12.6746 2.96134C11.5394 2.95935 10.4092 3.11072 9.31458 3.41134C6.74458 1.66134 5.62458 2.03134 5.62458 2.03134C5.26068 2.90633 5.13976 3.86333 5.27458 4.80134C5.32203 5.0712 5.39572 5.33579 5.49458 5.59134C5.40458 5.69134 5.31458 5.80134 5.23458 5.90134C4.48835 6.83734 4.09223 8.00447 4.11458 9.20134C4.11221 9.48519 4.12556 9.76896 4.15458 10.0513C4.47452 14.4813 7.42458 15.5113 10.2346 15.8313C9.83684 16.2012 9.56715 16.688 9.46458 17.2213C9.37163 17.577 9.32789 17.9438 9.33458 18.3113V19.6209C8.21636 19.7203 7.0681 19.5576 6.71239 18.5596C6.32999 17.6046 5.69605 16.771 4.87792 16.1475C4.81847 16.1149 4.76192 16.0774 4.70892 16.0352C4.63708 15.8462 4.50973 15.6834 4.34362 15.5682C4.17751 15.453 3.98041 15.3907 3.77826 15.3896H3.77345C3.50905 15.3895 3.25538 15.4942 3.06796 15.6807C2.88055 15.8672 2.77465 16.1204 2.77345 16.3848C2.76955 17.1973 3.58254 17.7217 3.91603 17.9004C4.30496 18.2923 4.61787 18.7528 4.83888 19.2588C5.20314 20.2822 6.26808 21.8369 9.3047 21.6348C9.3057 21.6699 9.3067 21.7031 9.30715 21.7334L9.31154 22.001C9.31151 22.1323 9.33735 22.2624 9.38759 22.3837C9.43783 22.5051 9.51149 22.6153 9.60436 22.7082C9.69722 22.801 9.80748 22.8747 9.92882 22.9249C10.0502 22.9752 10.1802 23.001 10.3115 23.001L10.3147 23.0004V23.001H15.0258C15.1571 23.0011 15.2872 22.9752 15.4085 22.925C15.5298 22.8747 15.6401 22.8011 15.733 22.7082C15.8258 22.6153 15.8995 22.5051 15.9497 22.3837C16 22.2624 16.0258 22.1324 16.0258 22.001C16.0258 22.001 16.0331 18.8414 16.0331 18.3114C16.0398 17.9438 15.996 17.5771 15.9031 17.2214L15.9013 17.2153L15.9046 17.2214C15.896 17.1864 15.8829 17.1579 15.8735 17.1239C15.7619 16.6286 15.5039 16.1782 15.133 15.8313L15.1446 15.8522C15.1378 15.846 15.1314 15.8373 15.1246 15.8313C17.9346 15.5113 20.8646 14.4613 21.1846 10.0513C21.2136 9.76895 21.2269 9.48518 21.2246 9.20133C21.2423 8.00685 20.8506 6.8423 20.1146 5.90134V5.90134Z" fill="white"/>
+						</svg>
+					</a>
+				</li>
+				<li class="sidebar__item">
+					<a href="https://www.linkedin.com/in/patrick-daguio/"  target="_blank">
+						<svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_146_4)">
+							<path d="M0 4.26257C0 3.23295 0.360371 2.38353 1.08108 1.71431C1.80179 1.04506 2.73875 0.710449 3.89189 0.710449C5.02446 0.710449 5.94079 1.0399 6.64093 1.69887C7.36164 2.3784 7.72201 3.26384 7.72201 4.35524C7.72201 5.34365 7.37195 6.16731 6.67181 6.82628C5.9511 7.50582 5.00386 7.84558 3.83012 7.84558H3.79923C2.66666 7.84558 1.75033 7.50582 1.05019 6.82628C0.350054 6.14674 0 5.29216 0 4.26257ZM0.401544 31.2896V10.6564H7.25869V31.2896H0.401544ZM11.0579 31.2896H17.9151V19.7684C17.9151 19.0476 17.9974 18.4916 18.1622 18.1004C18.4504 17.4003 18.888 16.8082 19.4749 16.3243C20.0618 15.8404 20.7979 15.5985 21.6834 15.5985C23.9897 15.5985 25.1429 17.1532 25.1429 20.2626V31.2896H32V19.4595C32 16.4119 31.2793 14.1004 29.8378 12.5251C28.3964 10.9498 26.4916 10.1622 24.1236 10.1622C21.4672 10.1622 19.3977 11.305 17.9151 13.5908V13.6525H17.8842L17.9151 13.5908V10.6564H11.0579C11.0991 11.3153 11.1197 13.3642 11.1197 16.8031C11.1197 20.242 11.0991 25.0708 11.0579 31.2896Z" fill="white"/></g><defs><clipPath id="clip0_146_4"><rect width="32" height="32" fill="white"/></clipPath></defs>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</aside>
+		<aside class="sidebar sidebar--right">
+			<a class="sidebar__email" href="mailto:patrickdaguio@outlook.com" target="_blank">patrickdaguio@outlook.com</a>
+		</aside>
+
+		<main class="main">
+			<section class="hero">
+				<div class="hero__content-wrapper">
+					<h1 class="text text--secondary hero__intro">Hello, I am</h1>
+					<h2 class="text text--highlight hero__name">Patrick Daguio.</h2>
+					<h3 class="text text--secondary hero__caption">I build things for the web.</h3>
+					<p class="text text--secondary hero__desc">I’m a Frontend Developer who strives to build immersive and
+					beautiful web applications through carefully crafted code and
+					user-centric design.</p>
+					<div class="hero__btn-wrapper">
+						<button class="btn hero__btn__projects btn--yellow">Projects</button>
+						<button class="btn hero__btn__cv btn--white">Download CV</button>
+					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="about__content-wrapper">
+					<h1 class="text about__heading">&#60;About&#62;</h1>
+				</div>
+			</section>
+		</main>
+
+		<div id="particles-js"></div>
+	</body>
+
+	<script src="../src/scripts/index.js"></script>
+	<script src="../src/scripts/vendors/particles.js"></script>
+	<script src="../src/scripts/vendors/app.js"></script>
 </html>
