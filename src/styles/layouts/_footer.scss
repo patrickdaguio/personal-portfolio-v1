@@ -1,0 +1,7 @@
+.footer {
+	@include flex-display(flex, center, center);
+	height: 5vh;
+	&__copyright {
+		font-size: 1em;
+	}
+}

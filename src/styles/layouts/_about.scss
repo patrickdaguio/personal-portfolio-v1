@@ -1,0 +1,35 @@
+.about {
+	height: 100vh;
+	max-width: 1440px;
+	margin: 0 auto;
+	@include flex-display(flex, flex-start, center);
+	flex-direction: column;
+	&__heading {
+		margin-bottom: 2em;
+	}
+	&__content-wrapper {
+		width: 100%;
+		@include flex-display(flex, flex-start, space-between);
+	}
+	&__details {
+		margin-top: 1em;
+		max-width: 700px;
+		&__text {
+			margin-bottom: 1em;
+		}
+		&__wrapper {
+			margin-bottom: 2em;
+		}
+	}
+	&__tools {
+		&__wrapper {
+			@include flex-display(grid, center, center);
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			gap: 1.5em 3em;
+		}
+		&__heading {
+			margin-bottom: 1.35em;
+		}
+	}
+}

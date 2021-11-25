@@ -1,14 +1,34 @@
 .text {
 	@include font-source(
 		$base-font-family,
-		1em,
+		1.25em,
 		$light-font-weight,
 		$primary-text
 	);
-	&--highlight {
-		color: $highlight-text;
-	}
-	&--secondary {
-		color: $secondary-text;
-	}
+}
+
+.secondary {
+	color: $secondary-text !important;
+}
+
+.highlight {
+	color: $highlight-text !important;
+}
+
+.heading {
+	@include font-source(
+		$base-font-family,
+		2.5em,
+		$bold-font-weight,
+		$primary-text
+	);
+}
+
+.subheading {
+	@include font-source(
+		$base-font-family,
+		1.75em,
+		$bold-font-weight,
+		$primary-text
+	);
 }

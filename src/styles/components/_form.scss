@@ -1,0 +1,66 @@
+.contact__form {
+	label {
+		display: none;
+	}
+	&__btn {
+		margin-top: 2em;
+		padding: 0.5em 2em;
+		&::after {
+			width: 115px;
+		}
+	}
+	&__input-wrapper {
+		position: relative;
+		margin-bottom: 2.25em;
+	}
+	&__textArea-wrapper {
+		position: relative;
+	}
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 0.25em 0em;
+		border: none;
+		background: none;
+		@include font-source(
+			$base-font-family,
+			1em,
+			$light-font-weight,
+			$primary-text
+		);
+		outline: none;
+		border-bottom: 1px solid $primary-text;
+		&:focus,
+		&:not(:placeholder-shown) {
+			& + .contact__form__label {
+				transform: translate(0rem, -65%) scale(0.8);
+				color: $highlight-text;
+			}
+		}
+	}
+	&__label {
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: $primary-text;
+		border-radius: 8px;
+		white-space: nowrap;
+		transform: translate(0, 0);
+		transform-origin: 0 0;
+		transition: transform 120ms ease-in;
+		line-height: 1.2;
+	}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+	-webkit-text-fill-color: $primary-text;
+	transition: background-color 99999s ease-in-out 0s,
+		color 99999s ease-in-out 0s;
+}

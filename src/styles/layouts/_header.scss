@@ -1,0 +1,11 @@
+.header {
+	position: fixed;
+	padding: 0 4em;
+	width: 100%;
+	height: 120px;
+	@include flex-display(flex, center, center);
+	&__wrapper {
+		@include flex-display(flex, center, space-between);
+		width: 100%;
+	}
+}
