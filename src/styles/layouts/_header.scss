@@ -2,10 +2,16 @@
 	position: fixed;
 	padding: 0 4em;
 	width: 100%;
-	height: 120px;
+	height: 100px;
 	@include flex-display(flex, center, center);
+	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 	&__wrapper {
 		@include flex-display(flex, center, space-between);
 		width: 100%;
 	}
+}
+
+.header-scroll {
+	height: 70px;
+	transform: translateY(-70px);
 }

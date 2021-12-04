@@ -16,12 +16,6 @@
 		right: 84px;
 	}
 	&__email {
-		@include font-source(
-			$base-font-family,
-			0.9em,
-			$light-font-weight,
-			$primary-text
-		);
 		writing-mode: vertical-lr;
 		padding: 1.5em 0em;
 		letter-spacing: $spacing;

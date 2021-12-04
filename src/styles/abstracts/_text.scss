@@ -1,0 +1,55 @@
+$type-scale: (
+	'heading': (
+		'xs': 1.75em,
+		's': 2em,
+		'm': 2.5em,
+		'l': 3.2em,
+		'xl': 4.6em
+	),
+	'text': (
+		'xs': 0.75em,
+		's': 0.9em,
+		'm': 1em,
+		'l': 1.25em,
+		'xl': 1.55em
+	)
+);
+
+@each $type, $font-size in $type-scale {
+	@each $size, $value in $font-size {
+		@if ($type == 'heading') {
+			.#{$type}-#{$size} {
+				font-size: #{$value};
+			}
+		} @else {
+			.#{$type}-#{$size} {
+				font-size: #{$value};
+			}
+		}
+	}
+}
+
+$text-colour: (
+	'primary': $primary-text,
+	'secondary': $secondary-text,
+	'highlight': $highlight-text
+);
+
+@each $type, $colour in $text-colour {
+	.#{$type} {
+		color: $colour;
+	}
+}
+
+$text-weight: (
+	'light': $light-font-weight,
+	'base': $base-font-weight,
+	'med': $medium-font-weight,
+	'bold': $bold-font-weight
+);
+
+@each $type, $weight in $text-weight {
+	.#{$type} {
+		font-weight: $weight;
+	}
+}

@@ -11,7 +11,7 @@
 	justify-content: $justify;
 }
 
-@mixin mq($width, $type: max) {
+@mixin mQ($width, $type: max) {
 	@if map_has_key($breakpoints, $width) {
 		$width: map_get($breakpoints, $width);
 		@media only screen and (#{$type}-width: $width) {
@@ -43,4 +43,12 @@
 	left: 0;
 	z-index: -1;
 	transition: 0.4s;
+}
+
+@mixin pageSetup($height, $width) {
+	height: $height;
+	max-width: $width;
+	margin: 0 auto;
+	@include flex-display(flex, flex-start, center);
+	flex-direction: column;
 }

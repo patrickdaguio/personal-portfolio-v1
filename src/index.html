@@ -56,47 +56,47 @@
 			</ul>
 		</aside>
 		<aside class="sidebar sidebar--right">
-			<a class="sidebar__email" href="mailto:patrickdaguio@outlook.com" target="_blank">patrickdaguio@outlook.com</a>
+			<a class="sidebar__email text-s primary light" href="mailto:patrickdaguio@outlook.com" target="_blank">patrickdaguio@outlook.com</a>
 		</aside>
 
 		<main class="main">
 			<section class="hero">
 				<div class="hero__content-wrapper">
-					<h1 class=" secondary hero__intro">Hello, I am</h1>
-					<h2 class=" highlight hero__name">Patrick Daguio.</h2>
-					<h3 class=" secondary hero__caption">I build things for the web.</h3>
-					<p class="text secondary hero__desc">I’m a Frontend Developer who strives to build immersive and
+					<h1 class="text-xl secondary med hero__intro">Hello, I am</h1>
+					<h2 class="heading-xl highlight med hero__name">Patrick Daguio.</h2>
+					<h3 class="heading-l secondary med hero__caption">I build things for the web.</h3>
+					<p class="text-l secondary base hero__desc">I’m a Frontend Developer who strives to build immersive and
 					beautiful web applications through carefully crafted code and
 					user-centric design.</p>
 					<div class="hero__btn-wrapper">
-						<button class="btn hero__btn__projects btn--yellow">Projects</button>
-						<button class="btn hero__btn__cv btn--white">Download CV</button>
+						<a href="#portfolio"><button class="btn hero__btn__projects btn--yellow">Projects</button></a>
+						<a href="../public/cv.pdf" target="_blank"><button class="btn hero__btn__cv btn--white">Download CV</button></a>
 					</div>
 				</div>
 			</section>
 
 			<section class="about" id="about">
-				<h1 class="heading about__heading">&#60;About&#62;</h1>
+				<h1 class="heading-m bold about__heading">&#60;About&#62;</h1>
 				<div class="about__content-wrapper">
 					<div class="about__details">
 						<div class="about__details__wrapper">
-							<p class="text about__details__text">
+							<p class="text-l light about__details__text">
 								I am a <span class="highlight">Frontend Developer</span> who strives to build <span class="highlight">immersive web applications</span>.
 							</p>
-							<p class="text about__details__text">
+							<p class="text-l light about__details__text">
 								I follow the <span class="highlight">Kaizen</span> lifestyle which aims to improve at what they do everyday. I am always looking for ways to learn and grow my knowledge in all aspects of the web to achieve my long term goal of being a <span class="highlight">Full-stack Developer</span>.
 							</p>
-							<p class="text about__details__text">
+							<p class="text-l light about__details__text">
 								When I’m not coding, you can expect to find me either behind the <span class="highlight">drums</span>, in the <span class="highlight">gym</span> or I’ll still be at my desk but I’ll be <span class="highlight">gaming</span>.
 							</p>
 						</div>
 						<div class="about__btn-wrapper">
-							<button class="btn hero__btn__projects btn--yellow">Contact Me</button>
+							<a href="#contact"><button class="btn hero__btn__projects btn--yellow">Contact Me</button></a>
 							<button class="btn hero__btn__cv btn--white">Download CV</button>
 						</div>
 					</div>
 					<div class="about__tools">
-						<h2 class="subheading about__tools__heading">&#60;Tools&#62;</h2>
+						<h2 class="heading-xs bold about__tools__heading">&#60;Tools&#62;</h2>
 						<div class="about__tools__wrapper">
 							<div class="about__tools__tool" title="JavaScript">
 								<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,31 +164,171 @@
 			</section>
 
 			<section class="portfolio" id="portfolio">
-				<h1 class="heading portfolio__heading">&#60;Portfolio&#62;</h1>
-				<div class="portfolio__content-wrapper"></div>
+				<h1 class="heading-m bold portfolio__heading">&#60;Portfolio&#62;</h1>
+				<div class="portfolio__content-wrapper">
+					<ul class="portfolio__projects-wrapper">
+						<li class="portfolio__project">
+							<div class="portfolio__project__image">
+								<img src="../public/projects/outset2.png" alt="Outset">
+							</div>
+							<div class="portfolio__project__content">
+								<h3 class="text-m portfolio__project__number highlight">Project 01</h3>
+								<h2 class="portfolio__project__name heading-s">Outset</h2>
+								<div class="portfolio__project__desc-wrapper">
+									<p class="text-s light portfolio__project__description">
+										A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.  Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+									</p>
+								</div>
+								<ul class="portfolio__project__skills-wrapper">
+									<li class="text-s light portfolio__project__skill">APIs</li>
+									<li class="text-s light portfolio__project__skill">SCSS</li>
+									<li class="text-s light portfolio__project__skill">JS</li>
+									<li class="text-s light portfolio__project__skill">Express</li>
+									<li class="text-s light portfolio__project__skill">NodeJS</li>
+									<li class="text-s light portfolio__project__skill">Parcel</li>
+								</ul>
+								<div class="portfolio__project__socials-wrapper">
+									<a href="https://outset-website.vercel.app/" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.6745 1.54196C14.9184 -0.506825 12.0414 -0.506825 10.2853 1.54196L6.83533 5.56687C8.01851 5.17455 9.30138 5.27626 10.4223 5.88654L12.2157 3.79417C12.9132 2.98047 14.0465 2.98047 14.744 3.79417C15.4415 4.60787 15.4415 5.93013 14.744 6.74383L12.4897 9.37383L11.0076 11.1029C10.3102 11.9166 9.17679 11.9166 8.47929 11.1029L6.54883 13.3552C6.99719 13.8783 7.52029 14.2706 8.06829 14.5176C9.55043 15.2005 11.2692 14.939 12.5644 13.7474C12.689 13.6312 12.826 13.5005 12.9381 13.3551L15.2671 10.6379L16.6745 8.99599C18.4431 6.94726 18.4431 3.60527 16.6745 1.54196Z" fill="white"/>
+											<path d="M7.49452 15.2005L5.77578 17.2057C5.07832 18.0194 3.94496 18.0194 3.2475 17.2057C2.55004 16.392 2.55004 15.0697 3.2475 14.256L6.98388 9.89693C7.68134 9.08323 8.81471 9.08323 9.51221 9.89693L11.4427 7.64473C10.9943 7.12163 10.4712 6.72931 9.92321 6.4823C8.36638 5.75578 6.53555 6.08998 5.22782 7.45583C5.16555 7.51395 5.10328 7.58661 5.05346 7.64473L1.31707 12.0038C-0.439025 14.0526 -0.439025 17.4091 1.31707 19.4579C3.07317 21.5067 5.95019 21.5067 7.70629 19.4579L11.0815 15.4766C9.36271 15.9415 8.96416 15.8834 7.49452 15.2005Z" fill="white"/>
+										</svg>
+									</a>
+									<a href="https://github.com/patrickdaguio/outset-website" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0001 19.2735V16.7622C12.0282 16.345 11.9799 15.9255 11.8583 15.5318C11.7367 15.138 11.5447 14.7789 11.2951 14.4785C13.6501 14.1722 16.1251 13.131 16.1251 8.35344C16.1248 7.1318 15.7221 5.95699 15.0001 5.07219C15.3419 4.00339 15.3178 2.822 14.9326 1.77344C14.9326 1.77344 14.0476 1.46719 12.0001 3.06844C10.2811 2.52491 8.46907 2.52491 6.75006 3.06844C4.70256 1.46719 3.81756 1.77344 3.81756 1.77344C3.43234 2.822 3.40816 4.00339 3.75006 5.07219C3.02265 5.96356 2.61945 7.14898 2.62506 8.37969C2.62506 13.1222 5.10005 14.1635 7.45505 14.5047C7.2083 14.8022 7.018 15.1569 6.89653 15.5459C6.77507 15.9348 6.72516 16.3493 6.75006 16.7622V19.2735" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M6.75 17.5234C4.5 18.375 2.625 17.5234 1.5 14.8984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="portfolio__project">
+							<div class="portfolio__project__image">
+								<img src="../public/projects/snazzle.png" alt="Snazzle">
+							</div>
+							<div class="portfolio__project__content">
+								<h3 class="text-m portfolio__project__number highlight">Project 02</h3>
+								<h2 class="portfolio__project__name heading-s">Bookmark</h2>
+								<div class="portfolio__project__desc-wrapper">
+									<p class="text-s light portfolio__project__description">
+										A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+									</p>
+								</div>
+								<ul class="portfolio__project__skills-wrapper">
+									<li class="text-s light portfolio__project__skill">HighwayJS</li>
+									<li class="text-s light portfolio__project__skill">SCSS</li>
+									<li class="text-s light portfolio__project__skill">JS</li>
+									<li class="text-s light portfolio__project__skill">GSAP</li>
+									<li class="text-s light portfolio__project__skill">Parcel</li>
+								</ul>
+								<div class="portfolio__project__socials-wrapper">
+									<a href="https://snazzle-website.vercel.app/" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.6745 1.54196C14.9184 -0.506825 12.0414 -0.506825 10.2853 1.54196L6.83533 5.56687C8.01851 5.17455 9.30138 5.27626 10.4223 5.88654L12.2157 3.79417C12.9132 2.98047 14.0465 2.98047 14.744 3.79417C15.4415 4.60787 15.4415 5.93013 14.744 6.74383L12.4897 9.37383L11.0076 11.1029C10.3102 11.9166 9.17679 11.9166 8.47929 11.1029L6.54883 13.3552C6.99719 13.8783 7.52029 14.2706 8.06829 14.5176C9.55043 15.2005 11.2692 14.939 12.5644 13.7474C12.689 13.6312 12.826 13.5005 12.9381 13.3551L15.2671 10.6379L16.6745 8.99599C18.4431 6.94726 18.4431 3.60527 16.6745 1.54196Z" fill="white"/>
+											<path d="M7.49452 15.2005L5.77578 17.2057C5.07832 18.0194 3.94496 18.0194 3.2475 17.2057C2.55004 16.392 2.55004 15.0697 3.2475 14.256L6.98388 9.89693C7.68134 9.08323 8.81471 9.08323 9.51221 9.89693L11.4427 7.64473C10.9943 7.12163 10.4712 6.72931 9.92321 6.4823C8.36638 5.75578 6.53555 6.08998 5.22782 7.45583C5.16555 7.51395 5.10328 7.58661 5.05346 7.64473L1.31707 12.0038C-0.439025 14.0526 -0.439025 17.4091 1.31707 19.4579C3.07317 21.5067 5.95019 21.5067 7.70629 19.4579L11.0815 15.4766C9.36271 15.9415 8.96416 15.8834 7.49452 15.2005Z" fill="white"/>
+										</svg>
+									</a>
+									<a href="https://github.com/patrickdaguio/snazzle-website" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0001 19.2735V16.7622C12.0282 16.345 11.9799 15.9255 11.8583 15.5318C11.7367 15.138 11.5447 14.7789 11.2951 14.4785C13.6501 14.1722 16.1251 13.131 16.1251 8.35344C16.1248 7.1318 15.7221 5.95699 15.0001 5.07219C15.3419 4.00339 15.3178 2.822 14.9326 1.77344C14.9326 1.77344 14.0476 1.46719 12.0001 3.06844C10.2811 2.52491 8.46907 2.52491 6.75006 3.06844C4.70256 1.46719 3.81756 1.77344 3.81756 1.77344C3.43234 2.822 3.40816 4.00339 3.75006 5.07219C3.02265 5.96356 2.61945 7.14898 2.62506 8.37969C2.62506 13.1222 5.10005 14.1635 7.45505 14.5047C7.2083 14.8022 7.018 15.1569 6.89653 15.5459C6.77507 15.9348 6.72516 16.3493 6.75006 16.7622V19.2735" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M6.75 17.5234C4.5 18.375 2.625 17.5234 1.5 14.8984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="portfolio__project">
+							<div class="portfolio__project__image">
+								<img src="../public/projects/bookmark.png" alt="Bookmark">
+							</div>
+							<div class="portfolio__project__content">
+								<h3 class="text-m portfolio__project__number highlight">Project 03</h3>
+								<h2 class="portfolio__project__name heading-s">Bookmark</h2>
+								<div class="portfolio__project__desc-wrapper">
+									<p class="text-s light portfolio__project__description">
+										A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm. Package Control, Atom Package Manager, and npm.
+									</p>
+								</div>
+								<ul class="portfolio__project__skills-wrapper">
+									<li class="text-s light portfolio__project__skill">JS</li>
+									<li class="text-s light portfolio__project__skill">BEM</li>
+									<li class="text-s light portfolio__project__skill">SCSS</li>
+								</ul>
+								<div class="portfolio__project__socials-wrapper">
+									<a href="https://bookmark-landing-page-phi.vercel.app/#" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.6745 1.54196C14.9184 -0.506825 12.0414 -0.506825 10.2853 1.54196L6.83533 5.56687C8.01851 5.17455 9.30138 5.27626 10.4223 5.88654L12.2157 3.79417C12.9132 2.98047 14.0465 2.98047 14.744 3.79417C15.4415 4.60787 15.4415 5.93013 14.744 6.74383L12.4897 9.37383L11.0076 11.1029C10.3102 11.9166 9.17679 11.9166 8.47929 11.1029L6.54883 13.3552C6.99719 13.8783 7.52029 14.2706 8.06829 14.5176C9.55043 15.2005 11.2692 14.939 12.5644 13.7474C12.689 13.6312 12.826 13.5005 12.9381 13.3551L15.2671 10.6379L16.6745 8.99599C18.4431 6.94726 18.4431 3.60527 16.6745 1.54196Z" fill="white"/>
+											<path d="M7.49452 15.2005L5.77578 17.2057C5.07832 18.0194 3.94496 18.0194 3.2475 17.2057C2.55004 16.392 2.55004 15.0697 3.2475 14.256L6.98388 9.89693C7.68134 9.08323 8.81471 9.08323 9.51221 9.89693L11.4427 7.64473C10.9943 7.12163 10.4712 6.72931 9.92321 6.4823C8.36638 5.75578 6.53555 6.08998 5.22782 7.45583C5.16555 7.51395 5.10328 7.58661 5.05346 7.64473L1.31707 12.0038C-0.439025 14.0526 -0.439025 17.4091 1.31707 19.4579C3.07317 21.5067 5.95019 21.5067 7.70629 19.4579L11.0815 15.4766C9.36271 15.9415 8.96416 15.8834 7.49452 15.2005Z" fill="white"/>
+										</svg>
+									</a>
+									<a href="https://github.com/patrickdaguio/bookmark-landing-page" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0001 19.2735V16.7622C12.0282 16.345 11.9799 15.9255 11.8583 15.5318C11.7367 15.138 11.5447 14.7789 11.2951 14.4785C13.6501 14.1722 16.1251 13.131 16.1251 8.35344C16.1248 7.1318 15.7221 5.95699 15.0001 5.07219C15.3419 4.00339 15.3178 2.822 14.9326 1.77344C14.9326 1.77344 14.0476 1.46719 12.0001 3.06844C10.2811 2.52491 8.46907 2.52491 6.75006 3.06844C4.70256 1.46719 3.81756 1.77344 3.81756 1.77344C3.43234 2.822 3.40816 4.00339 3.75006 5.07219C3.02265 5.96356 2.61945 7.14898 2.62506 8.37969C2.62506 13.1222 5.10005 14.1635 7.45505 14.5047C7.2083 14.8022 7.018 15.1569 6.89653 15.5459C6.77507 15.9348 6.72516 16.3493 6.75006 16.7622V19.2735" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M6.75 17.5234C4.5 18.375 2.625 17.5234 1.5 14.8984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="portfolio__project">
+							<div class="portfolio__project__image">
+								<img src="../public/projects/ecclesia.png" alt="Ecclesia">
+							</div>
+							<div class="portfolio__project__content">
+								<h3 class="text-m portfolio__project__number highlight">Project 04</h3>
+								<h2 class="portfolio__project__name heading-s">Ecclesia</h2>
+								<div class="portfolio__project__desc-wrapper">
+									<p class="text-s light portfolio__project__description">
+										A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm. Package Control, Atom Package Manager, and npm.
+									</p>
+								</div>
+								<ul class="portfolio__project__skills-wrapper">
+									<li class="text-s light portfolio__project__skill">JS</li>
+									<li class="text-s light portfolio__project__skill">GSAP</li>
+									<li class="text-s light portfolio__project__skill">SCSS</li>
+								</ul>
+								<div class="portfolio__project__socials-wrapper">
+									<a href="https://outset-website.vercel.app/" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.6745 1.54196C14.9184 -0.506825 12.0414 -0.506825 10.2853 1.54196L6.83533 5.56687C8.01851 5.17455 9.30138 5.27626 10.4223 5.88654L12.2157 3.79417C12.9132 2.98047 14.0465 2.98047 14.744 3.79417C15.4415 4.60787 15.4415 5.93013 14.744 6.74383L12.4897 9.37383L11.0076 11.1029C10.3102 11.9166 9.17679 11.9166 8.47929 11.1029L6.54883 13.3552C6.99719 13.8783 7.52029 14.2706 8.06829 14.5176C9.55043 15.2005 11.2692 14.939 12.5644 13.7474C12.689 13.6312 12.826 13.5005 12.9381 13.3551L15.2671 10.6379L16.6745 8.99599C18.4431 6.94726 18.4431 3.60527 16.6745 1.54196Z" fill="white"/>
+											<path d="M7.49452 15.2005L5.77578 17.2057C5.07832 18.0194 3.94496 18.0194 3.2475 17.2057C2.55004 16.392 2.55004 15.0697 3.2475 14.256L6.98388 9.89693C7.68134 9.08323 8.81471 9.08323 9.51221 9.89693L11.4427 7.64473C10.9943 7.12163 10.4712 6.72931 9.92321 6.4823C8.36638 5.75578 6.53555 6.08998 5.22782 7.45583C5.16555 7.51395 5.10328 7.58661 5.05346 7.64473L1.31707 12.0038C-0.439025 14.0526 -0.439025 17.4091 1.31707 19.4579C3.07317 21.5067 5.95019 21.5067 7.70629 19.4579L11.0815 15.4766C9.36271 15.9415 8.96416 15.8834 7.49452 15.2005Z" fill="white"/>
+										</svg>
+									</a>
+									<a href="https://github.com/patrickdaguio/outset-website" target="_blank" class="portfolio__project__link">
+										<svg width="24" height="24" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.0001 19.2735V16.7622C12.0282 16.345 11.9799 15.9255 11.8583 15.5318C11.7367 15.138 11.5447 14.7789 11.2951 14.4785C13.6501 14.1722 16.1251 13.131 16.1251 8.35344C16.1248 7.1318 15.7221 5.95699 15.0001 5.07219C15.3419 4.00339 15.3178 2.822 14.9326 1.77344C14.9326 1.77344 14.0476 1.46719 12.0001 3.06844C10.2811 2.52491 8.46907 2.52491 6.75006 3.06844C4.70256 1.46719 3.81756 1.77344 3.81756 1.77344C3.43234 2.822 3.40816 4.00339 3.75006 5.07219C3.02265 5.96356 2.61945 7.14898 2.62506 8.37969C2.62506 13.1222 5.10005 14.1635 7.45505 14.5047C7.2083 14.8022 7.018 15.1569 6.89653 15.5459C6.77507 15.9348 6.72516 16.3493 6.75006 16.7622V19.2735" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M6.75 17.5234C4.5 18.375 2.625 17.5234 1.5 14.8984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<section class="contact" id="contact">
-				<h1 class="heading contact__heading">&#60;Contact&#62;</h1>
+				<h1 class="heading-m bold contact__heading">&#60;Contact&#62;</h1>
 				<div class="contact__content-wrapper">
 					<div class="contact__message-wrapper">
-						<h2 class="heading contact__message-heading">Get in touch</h2>
-						<p class="text contact__message">
+						<h2 class="heading-m bold contact__message-heading">Get in touch</h2>
+						<p class="text-l light contact__message">
 							Got any questions? Feel free to message me about anything. I’ll get back to you as soon as possible.
 						</p>
-						<p class="text contact__message">
+						<p class="text-l light contact__message">
 							Thank you for taking the time to look at my portfolio.
 						</p>
-						<h3 class="subheading highlight contact__greeting">
+						<h3 class="heading-s bold highlight contact__greeting">
 							Stay cool &
 						</h3>
-						<h3 class="subheading highlight contact__greeting">
+						<h3 class="heading-s bold highlight contact__greeting">
 							Have and <span class="contact__adjective">amazing</span> <span class="contact__date">Sunday</span>
 						</h3>
 					</div>
 					<div class="contact__form-wrapper">
-						<h2 class="subheading contact__form-heading">Drop me a message</h2>
-						<p class="text contact__form-email">Don’t like forms? Send me an <a href="mailto:patrickdaguio@outlook.com" target="_blank" class="contact__form__email">email</a></p>
+						<h2 class="heading-xs contact__form-heading">Drop me a message</h2>
+						<p class="text-s contact__form-email">Don’t like forms? Send me an <a href="mailto:patrickdaguio@outlook.com" target="_blank" class="contact__form__email">email</a></p>
 						<div class="contact__form">
 							<div class="contact__form__input-wrapper">
 								<label for="name">Name</label>
@@ -213,7 +353,7 @@
 		</main>
 
 		<footer class="footer">
-			<p class="text footer__copyright">© 2021 <span class="highlight">Patrick Daguio</span>. All rights reserved.</p>
+			<p class="text-m footer__copyright">© 2021 <span class="highlight">Patrick Daguio</span>. All rights reserved.</p>
 		</footer>
 
 		<div id="particles-js"></div>

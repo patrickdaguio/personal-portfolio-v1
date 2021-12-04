@@ -1,7 +1,78 @@
 .portfolio {
-	height: 100vh;
-	max-width: 1440px;
-	margin: 0 auto;
-	@include flex-display(flex, flex-start, center);
-	flex-direction: column;
+	@include pageSetup(200vh, 1440px);
+	&__heading {
+		margin-bottom: 2em;
+	}
+	&__project {
+		@include flex-display(grid, center, flex-start);
+		position: relative;
+		gap: 10px;
+		grid-template-columns: repeat(12, 1fr);
+		&:not(:last-of-type) {
+			margin-bottom: 6em;
+		}
+		&__content {
+			position: relative;
+			grid-area: 1 / 1 / -1 / 7;
+		}
+		&__image {
+			grid-area: 1 / 6 / -1 / -1;
+			justify-self: flex-end;
+
+			position: relative;
+		}
+		&__skills-wrapper {
+			@include flex-display(flex, center, flex-end);
+			margin: 1em 0em;
+		}
+		&__socials-wrapper {
+			@include flex-display(flex, center, flex-end);
+		}
+		&__name {
+			margin-bottom: 0.25em;
+		}
+		&__desc-wrapper {
+			background-color: $onWhite-secondary-text;
+			padding: 1em 1.5em;
+			line-height: 1.4em;
+		}
+		&__skill {
+			&:not(:first-child) {
+				margin-left: 1em;
+			}
+			padding: 0.2em 1em;
+			text-align: center;
+			background-color: $onWhite-secondary-text;
+		}
+		&__link {
+			&:not(:first-child) {
+				margin-left: 1em;
+			}
+			transition: 0.2s;
+
+			&:hover {
+				svg {
+					* {
+						fill: $highlight-text;
+						stroke: $highlight-text;
+					}
+				}
+			}
+		}
+	}
+}
+
+.portfolio__project:nth-child(odd) .portfolio__project__content {
+	grid-column: 7 / -1;
+	text-align: right;
+}
+
+.portfolio__project:nth-child(odd) .portfolio__project__image {
+	grid-column: 1 / 8;
+	justify-self: flex-start;
+}
+
+.portfolio__project:nth-child(even) .portfolio__project__skills-wrapper,
+.portfolio__project:nth-child(even) .portfolio__project__socials-wrapper {
+	@include flex-display(flex, center, flex-start);
 }
