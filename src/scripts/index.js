@@ -18,3 +18,11 @@ window.addEventListener('scroll', function () {
 	}
 	lastScrollTop = scrollTop;
 });
+
+// Theme Changer
+
+let themeBtn = document.querySelector('.theme-changer');
+
+themeBtn.addEventListener('click', () => {
+	console.log(themeBtn);
+});

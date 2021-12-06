@@ -1,7 +1,14 @@
 .portfolio {
-	@include pageSetup(200vh, 1440px);
+	@include pageSetup(auto, 1440px);
+	padding: 10em 0em;
 	&__heading {
 		margin-bottom: 2em;
+	}
+	&__content-wrapper {
+		max-width: 1300px;
+		margin: 0 auto;
+		@include flex-display(flex, center, center);
+		flex-direction: column;
 	}
 	&__project {
 		@include flex-display(grid, center, flex-start);
@@ -13,12 +20,11 @@
 		}
 		&__content {
 			position: relative;
-			grid-area: 1 / 1 / -1 / 7;
+			grid-area: 1 / 1 / -1 / 8;
 		}
 		&__image {
 			grid-area: 1 / 6 / -1 / -1;
 			justify-self: flex-end;
-
 			position: relative;
 		}
 		&__skills-wrapper {
@@ -63,7 +69,7 @@
 }
 
 .portfolio__project:nth-child(odd) .portfolio__project__content {
-	grid-column: 7 / -1;
+	grid-column: 6 / -1;
 	text-align: right;
 }
 

@@ -5,14 +5,14 @@
 			display: flex;
 			&__item {
 				&:not(:last-child) {
-					margin-right: 3em;
+					margin-right: 2.5em;
 				}
 			}
 			&__link {
 				transition: 0.3s;
 				@include font-source(
 					$heading-font-family,
-					1.25em,
+					1.1em,
 					$base-font-weight,
 					$secondary-text
 				);

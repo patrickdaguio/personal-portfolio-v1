@@ -1,8 +1,5 @@
 .about {
 	@include pageSetup(100vh, 1440px);
-	@include mQ(xl) {
-		max-width: 1050px;
-	}
 	&__heading {
 		margin-bottom: 2em;
 	}
