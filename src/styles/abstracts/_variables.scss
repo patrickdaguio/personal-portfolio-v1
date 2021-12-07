@@ -1,12 +1,31 @@
 // Background Colours
-$primary-bg: #171717;
-$secondary-bg: #fff;
+$dark-bg: #171717;
+$light-bg: #fff;
+$card-bg: #ddd;
+$dark-bg-opacity: rgba(23, 23, 23, 0.7);
+$light-bg-opacity: rgba(255, 255, 255, 0.7);
 
 // Text Colours
-$primary-text: #fff;
-$secondary-text: #c4c4c4;
-$onWhite-primary-text: #4f4f4f;
-$onWhite-secondary-text: #262626;
-$highlight-text: #aa9d6e;
+$white: #fff;
+$light-gray: #c4c4c4;
+$gray: #4f4f4f;
+$dark-gray: #262626;
+$highlight: #aa9d6e;
 
 $spacing: 0.25px;
+
+$invert: invert(100%);
+$revert: invert(0);
+
+// Theme Keys
+
+$bg: 'bg';
+$card: 'card';
+$text: 'text';
+$text-secondary: 'text-secondary';
+$text-highlight: 'text-highlight';
+$button-bg: 'button-bg';
+$button-text: 'button-text';
+$particles: 'particles';
+$header-bg: 'header-bg';
+$header-link: 'header-link';

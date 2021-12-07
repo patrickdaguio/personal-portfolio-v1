@@ -1,10 +1,5 @@
 .header__logo {
 	text-decoration: none;
-	@include font-source(
-		$heading-font-family,
-		1.5em,
-		$base-font-weight,
-		$primary-text
-	);
+	@include font-source($heading-font-family, 1.5em, $base-font-weight, $text);
 	outline: none;
 }

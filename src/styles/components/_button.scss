@@ -8,25 +8,30 @@
 		$btn-font-family,
 		1.1em,
 		$bold-font-weight,
-		$onWhite-primary-text
+		$button-text
 	);
 	padding: 0.5em 1.25em;
 	&--yellow {
-		background-color: $highlight-text;
-		color: $primary-text;
+		background-color: $highlight;
+		color: $white !important;
+
 		&::after {
-			@include btnAfterBorder($highlight-text, 109px);
+			@include btnAfterBorder($text-highlight, 117px);
 		}
 		&::before {
-			@include btnBeforeBorder($highlight-text);
+			@include btnBeforeBorder($text-highlight);
 		}
 	}
 	&--white {
+		@include themed() {
+			background-color: t($button-bg);
+			color: t($button-text);
+		}
 		&::after {
-			@include btnAfterBorder($primary-text, 150px);
+			@include btnAfterBorder($button-bg, 165px);
 		}
 		&::before {
-			@include btnBeforeBorder($primary-text);
+			@include btnBeforeBorder($button-bg);
 		}
 	}
 	&:first-child {

@@ -2,7 +2,9 @@
 	font-family: $family;
 	font-size: $size;
 	font-weight: $weight;
-	color: $color;
+	@include themed() {
+		color: t($color);
+	}
 }
 
 @mixin flex-display($display, $align, $justify) {
@@ -21,9 +23,11 @@
 }
 
 @mixin btnAfterBorder($color, $width) {
+	@include themed() {
+		border: 1px solid t($color);
+	}
 	content: '';
 	position: absolute;
-	border: 1px $color solid;
 	width: $width;
 	top: 7px;
 	right: -10px;
@@ -33,10 +37,12 @@
 }
 
 @mixin btnBeforeBorder($color) {
+	@include themed() {
+		background-color: t($color);
+	}
 	content: '';
 	display: inline-block;
 	height: 100%;
-	background-color: $color;
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -51,4 +57,54 @@
 	margin: 0 auto;
 	@include flex-display(flex, flex-start, center);
 	flex-direction: column;
+}
+
+$themes: (
+	light: (
+		bg: $light-bg,
+		card: $card-bg,
+		text: $dark-bg,
+		text-secondary: $gray,
+		text-highlight: $highlight,
+		button-bg: $gray,
+		button-text: $white,
+		particles: $invert,
+		header-bg: $light-bg-opacity,
+		header-link: $light-gray
+	),
+	dark: (
+		bg: $dark-bg,
+		card: $dark-gray,
+		text: $white,
+		text-secondary: $light-gray,
+		text-highlight: $highlight,
+		button-bg: $white,
+		button-text: $gray,
+		particles: $revert,
+		header-bg: $dark-bg-opacity,
+		header-link: $gray
+	)
+);
+
+@mixin themed() {
+	@each $theme, $map in $themes {
+		.theme--#{$theme} & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				$theme-map: map-merge(
+					$theme-map,
+					(
+						$key: $value
+					)
+				) !global;
+			}
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@function t($key) {
+	@return map-get($theme-map, $key);
 }

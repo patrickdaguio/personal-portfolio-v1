@@ -22,19 +22,16 @@
 		padding: 0.25em 0em;
 		border: none;
 		background: none;
-		@include font-source(
-			$base-font-family,
-			1em,
-			$light-font-weight,
-			$primary-text
-		);
+		@include font-source($base-font-family, 1em, $base-font-weight, $text);
 		outline: none;
-		border-bottom: 1px solid $primary-text;
+		@include themed() {
+			border-bottom: 1px solid t($text);
+		}
 		&:focus,
 		&:not(:placeholder-shown) {
 			& + .contact__form__label {
 				transform: translate(0rem, -65%) scale(0.8);
-				color: $highlight-text;
+				color: $highlight;
 			}
 		}
 	}
@@ -42,7 +39,9 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		color: $primary-text;
+		@include themed() {
+			color: t($text);
+		}
 		border-radius: 8px;
 		white-space: nowrap;
 		transform: translate(0, 0);
@@ -60,7 +59,9 @@ textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:active {
-	-webkit-text-fill-color: $primary-text;
+	@include themed() {
+		-webkit-text-fill-color: t($text);
+	}
 	transition: background-color 99999s ease-in-out 0s,
 		color 99999s ease-in-out 0s;
 }

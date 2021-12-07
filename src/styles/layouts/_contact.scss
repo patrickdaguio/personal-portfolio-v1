@@ -2,7 +2,7 @@
 	@include pageSetup(94vh, 1440px);
 
 	&__heading {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 	&__content-wrapper {
 		width: 100%;
@@ -31,21 +31,25 @@
 		a {
 			text-decoration: none;
 			outline: none;
-			color: $primary-text;
+			@include themed() {
+				color: t($text);
+			}
 			position: relative;
 			&::after {
 				content: '';
 				position: absolute;
 				width: 100%;
 				height: 1px;
-				background: $primary-text;
+				@include themed() {
+					background: t($text);
+				}
 				bottom: 0;
 				left: 0;
 			}
 			&:hover {
-				color: $highlight-text;
+				color: $text-highlight;
 				&::after {
-					background-color: $highlight-text;
+					background-color: $text-highlight;
 				}
 			}
 		}

@@ -3,12 +3,12 @@ html {
 }
 
 body {
-	overflow-x: hidden;
-	font-family: $base-font-family;
-	color: $primary-text;
-	height: 100%;
 	width: 100%;
-	background-color: $primary-bg;
+	height: 100vh;
+	transition: 0.5s;
+	font-family: $base-font-family;
+	background-color: $dark-bg;
+	overflow-x: hidden;
 	&::-webkit-scrollbar {
 		width: 16px;
 	}
@@ -16,10 +16,16 @@ body {
 		background: transparent;
 	}
 	&::-webkit-scrollbar-thumb {
-		border: 5px solid rgba(0, 0, 0, 0);
+		border: 5px solid rgba(187, 160, 160, 0);
 		background-clip: padding-box;
 		border-radius: 9999px;
 		background-color: #aaa;
+	}
+}
+
+.container {
+	@include themed() {
+		color: t($text);
 	}
 }
 
@@ -38,6 +44,9 @@ ul {
 	z-index: -1;
 	top: 0;
 	left: 0;
+	@include themed() {
+		filter: t($particles);
+	}
 }
 
 .main {

@@ -7,7 +7,9 @@
 		width: 1px;
 		height: 90px;
 		margin: 0px auto;
-		background-color: $primary-text;
+		@include themed() {
+			background-color: t($text);
+		}
 	}
 	&--left {
 		left: 64px;
@@ -23,7 +25,7 @@
 		transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 		&:hover {
 			transform: translateY(-3px);
-			color: $highlight-text;
+			color: $highlight;
 		}
 	}
 	&__item {
@@ -33,13 +35,20 @@
 			a {
 				svg {
 					* {
-						fill: $highlight-text;
+						fill: $highlight;
 					}
 				}
 			}
 		}
 		&:last-child {
 			padding: 1.5em 0em;
+		}
+	}
+	&__social {
+		@include themed() {
+			* {
+				fill: t($text);
+			}
 		}
 	}
 }

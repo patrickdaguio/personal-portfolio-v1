@@ -1,8 +1,8 @@
 .portfolio {
 	@include pageSetup(auto, 1440px);
-	padding: 10em 0em;
+	padding: 6em 0em;
 	&__heading {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 	&__content-wrapper {
 		max-width: 1300px;
@@ -16,7 +16,7 @@
 		gap: 10px;
 		grid-template-columns: repeat(12, 1fr);
 		&:not(:last-of-type) {
-			margin-bottom: 6em;
+			margin-bottom: 4em;
 		}
 		&__content {
 			position: relative;
@@ -26,6 +26,9 @@
 			grid-area: 1 / 6 / -1 / -1;
 			justify-self: flex-end;
 			position: relative;
+			img {
+				box-shadow: 0 10px 30px -15px $dark-bg-opacity;
+			}
 		}
 		&__skills-wrapper {
 			@include flex-display(flex, center, flex-end);
@@ -38,9 +41,12 @@
 			margin-bottom: 0.25em;
 		}
 		&__desc-wrapper {
-			background-color: $onWhite-secondary-text;
+			box-shadow: 0 10px 30px -15px $dark-bg-opacity;
+			@include themed() {
+				background-color: t($card);
+			}
 			padding: 1em 1.5em;
-			line-height: 1.4em;
+			line-height: 1.5em;
 		}
 		&__skill {
 			&:not(:first-child) {
@@ -48,7 +54,9 @@
 			}
 			padding: 0.2em 1em;
 			text-align: center;
-			background-color: $onWhite-secondary-text;
+			@include themed() {
+				background-color: t($card);
+			}
 		}
 		&__link {
 			&:not(:first-child) {
@@ -56,11 +64,20 @@
 			}
 			transition: 0.2s;
 
+			svg {
+				* {
+					@include themed() {
+						fill: t($text);
+						stroke: t($text);
+					}
+				}
+			}
+
 			&:hover {
 				svg {
 					* {
-						fill: $highlight-text;
-						stroke: $highlight-text;
+						fill: $highlight;
+						stroke: $highlight;
 					}
 				}
 			}

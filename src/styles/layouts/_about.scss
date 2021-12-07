@@ -1,7 +1,7 @@
 .about {
 	@include pageSetup(100vh, 1440px);
 	&__heading {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 	&__content-wrapper {
 		width: 100%;
@@ -26,6 +26,13 @@
 		}
 		&__heading {
 			margin-bottom: 1.35em;
+		}
+	}
+	&__btn {
+		&__projects {
+			&::after {
+				width: 148px;
+			}
 		}
 	}
 }

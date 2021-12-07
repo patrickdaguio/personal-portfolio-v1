@@ -30,14 +30,16 @@ $type-scale: (
 }
 
 $text-colour: (
-	'primary': $primary-text,
-	'secondary': $secondary-text,
-	'highlight': $highlight-text
+	'primary': $text,
+	'secondary': $text-secondary,
+	'highlight': $text-highlight
 );
 
 @each $type, $colour in $text-colour {
 	.#{$type} {
-		color: $colour;
+		@include themed() {
+			color: t($colour);
+		}
 	}
 }
 
@@ -45,6 +47,7 @@ $text-weight: (
 	'light': $light-font-weight,
 	'base': $base-font-weight,
 	'med': $medium-font-weight,
+	'semi': $semi-font-weight,
 	'bold': $bold-font-weight
 );
 
