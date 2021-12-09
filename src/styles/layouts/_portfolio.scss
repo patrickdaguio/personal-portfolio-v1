@@ -1,8 +1,11 @@
 .portfolio {
 	@include pageSetup(auto, 1440px);
-	padding: 6em 0em;
+	padding: 5.5em 0em;
 	&__heading {
 		margin-bottom: 1.5em;
+		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 	}
 	&__content-wrapper {
 		max-width: 1300px;
@@ -15,6 +18,10 @@
 		position: relative;
 		gap: 10px;
 		grid-template-columns: repeat(12, 1fr);
+		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+
 		&:not(:last-of-type) {
 			margin-bottom: 4em;
 		}
@@ -28,6 +35,33 @@
 			position: relative;
 			img {
 				box-shadow: 0 10px 30px -15px $dark-bg-opacity;
+			}
+		}
+		&__choices {
+			margin-top: 0.5em;
+			@include flex-display(flex, center, center);
+			&__choice {
+				height: 10px;
+				transition: 0.3s;
+				cursor: pointer;
+				width: 10px;
+				border-radius: 50%;
+				@include themed() {
+					background-color: t($header-link);
+				}
+				&:not(:first-child) {
+					margin-left: 0.5em;
+				}
+				&--active {
+					@include themed() {
+						background-color: t($text);
+					}
+				}
+				&:hover {
+					@include themed() {
+						background-color: t($text);
+					}
+				}
 			}
 		}
 		&__skills-wrapper {

@@ -21,12 +21,15 @@ body {
 		border-radius: 9999px;
 		background-color: #aaa;
 	}
+	overflow: hidden;
 }
 
 .container {
 	@include themed() {
 		color: t($text);
 	}
+	visibility: hidden;
+	z-index: -1;
 }
 
 a {

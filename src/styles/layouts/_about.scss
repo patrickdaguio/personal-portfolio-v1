@@ -2,6 +2,9 @@
 	@include pageSetup(100vh, 1440px);
 	&__heading {
 		margin-bottom: 1.5em;
+		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 	}
 	&__content-wrapper {
 		width: 100%;
@@ -10,6 +13,9 @@
 	&__details {
 		margin-right: 4em;
 		max-width: 700px;
+		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 		&__text {
 			margin-bottom: 1em;
 		}
@@ -26,6 +32,15 @@
 		}
 		&__heading {
 			margin-bottom: 1.35em;
+			transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+				transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+			transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+		}
+		&__tool {
+			transition: all 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+				opacity 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+				transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+			transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 		}
 	}
 	&__btn {

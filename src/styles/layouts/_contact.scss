@@ -11,6 +11,9 @@
 	&__message-wrapper {
 		margin-right: 4em;
 		max-width: 600px;
+		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 	}
 	&__message {
 		margin-bottom: 1em;
@@ -25,6 +28,9 @@
 	}
 	&__form-wrapper {
 		width: 450px;
+		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 	}
 	&__form-email {
 		margin-bottom: 2.25em;

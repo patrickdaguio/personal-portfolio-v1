@@ -50,12 +50,13 @@
 					left: auto;
 					right: 0;
 					width: 0;
+					border-radius: 50%;
 					height: 2px;
 					z-index: 2;
 				}
 				&:hover {
 					@include themed() {
-						color: t($button-bg);
+						color: t($text);
 					}
 					&::after {
 						width: 100%;

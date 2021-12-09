@@ -9,7 +9,10 @@
 	},
 	"author": "Patrick Daguio patrickdaguio@outlook.com",
 	"license": "ISC",
-	"dependencies": {},
+	"dependencies": {
+		"baffle": "^0.3.6",
+		"gsap": "^3.8.0"
+	},
 	"devDependencies": {
 		"sass": "^1.43.4"
 	}
