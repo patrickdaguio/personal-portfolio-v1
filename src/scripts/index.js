@@ -54,6 +54,8 @@ themeBtn.addEventListener('click', () => {
 	body.classList.toggle('scroll-bar');
 });
 
+// Heading Animation
+
 const heading = baffle('.hero__caption');
 heading.set({
 	characters: '▒<▓ ▓█//< ▓>▒▒/ ▒>▒ ▓▒░█▒ ▒▒▒█ █░█ ░▓░/ ▓▒▓█',
@@ -238,3 +240,48 @@ tlContact
 	})
 	.from('.contact__form-wrapper', { opacity: 0 }, '-=0.5')
 	.from('.footer', { opacity: 0 }, '-=0.5');
+
+// Landing Pages Projects
+
+const landingPageProjects = document.querySelectorAll(
+	'.portfolio__project__choices__choice'
+);
+
+const landingPageImage = document.querySelectorAll(
+	'.portfolio__project__image'
+);
+const landingPageLink = document.querySelector(
+	'.portfolio__project__link--link'
+);
+const landingPageGit = document.querySelector('.portfolio__project__link--git');
+const carouselSlide = document.querySelector('.portfolio__project__carousel');
+
+landingPageProjects.forEach((proj, i) => {
+	proj.addEventListener('click', () => {
+		const size = landingPageImage[0].clientWidth;
+		switch (i) {
+			case 0:
+				carouselSlide.style.transform = 'translateX(' + -size * 0 + 'px)';
+				landingPageLink.href = 'https://bookmark-landing-page-phi.vercel.app/#';
+				landingPageGit.href =
+					'https://github.com/patrickdaguio/bookmark-landing-page';
+				break;
+			case 1:
+				carouselSlide.style.transform = 'translateX(' + -size * 1 + 'px)';
+				landingPageLink.href = 'https://shoe-product-landing-page.vercel.app/#';
+				landingPageGit.href =
+					'https://github.com/patrickdaguio/shoe-product-landing-page';
+				break;
+			case 2:
+				carouselSlide.style.transform = 'translateX(' + -size * 2 + 'px)';
+				landingPageLink.href = 'https://flyo-landing-page-dark.vercel.app/';
+				landingPageGit.href =
+					'https://github.com/patrickdaguio/flyo-landing-page-dark';
+				break;
+		}
+		landingPageProjects.forEach(btn => {
+			btn.classList.remove('portfolio__project__choices__choice--active');
+		});
+		proj.classList.add('portfolio__project__choices__choice--active');
+	});
+});

@@ -14,10 +14,11 @@
 .header-scroll {
 	height: 70px;
 	transform: translateY(-70px);
-	box-shadow: 0 10px 30px -15px $dark-bg-opacity;
+	box-shadow: 0 10px 20px -15px $dark-bg-opacity;
 }
 
 .header-top {
+	height: 80px;
 	@include themed() {
 		background-color: t($header-bg);
 	}

@@ -29,16 +29,23 @@
 			position: relative;
 			grid-area: 1 / 1 / -1 / 8;
 		}
-		&__image {
+		&__carousel {
+			display: flex;
+			transform-style: preserve-3d;
+			transition: transform 0.5s;
+		}
+		&__image-wrapper {
 			grid-area: 1 / 6 / -1 / -1;
+			width: 607px;
 			justify-self: flex-end;
+			overflow: hidden;
 			position: relative;
 			img {
 				box-shadow: 0 10px 30px -15px $dark-bg-opacity;
 			}
 		}
 		&__choices {
-			margin-top: 0.5em;
+			margin-top: 0.75em;
 			@include flex-display(flex, center, center);
 			&__choice {
 				height: 10px;
@@ -124,7 +131,7 @@
 	text-align: right;
 }
 
-.portfolio__project:nth-child(odd) .portfolio__project__image {
+.portfolio__project:nth-child(odd) .portfolio__project__image-wrapper {
 	grid-column: 1 / 8;
 	justify-self: flex-start;
 }
