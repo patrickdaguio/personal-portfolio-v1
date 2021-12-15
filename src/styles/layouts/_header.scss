@@ -8,13 +8,17 @@
 	&__wrapper {
 		@include flex-display(flex, center, space-between);
 		width: 100%;
+		position: relative;
+	}
+	@include mQ('l') {
+		padding: 0 2.5em;
 	}
 }
 
 .header-scroll {
-	height: 70px;
-	transform: translateY(-70px);
-	box-shadow: 0 10px 20px -15px $dark-bg-opacity;
+	height: 80px;
+	transform: translateY(-80px);
+	box-shadow: 0 10px 30px -15px $dark-bg-opacity;
 }
 
 .header-top {

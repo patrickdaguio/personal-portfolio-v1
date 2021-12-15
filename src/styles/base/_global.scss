@@ -56,4 +56,11 @@ ul {
 	min-height: 100vh;
 	width: 100%;
 	padding: 0em 9.5em;
+	@include mQ('l') {
+		padding: 0em 6em;
+	}
+}
+
+.disable-scroll {
+	overflow: hidden !important;
 }

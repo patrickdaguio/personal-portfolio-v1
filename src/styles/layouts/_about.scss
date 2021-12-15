@@ -1,3 +1,15 @@
+@mixin gitchText($offset, $text) {
+	content: $text;
+	position: absolute;
+	left: $offset;
+	top: $offset;
+	clip: rect(0, 900px, 0, 0);
+	background-color: $dark-bg;
+	color: $highlight;
+	animation: glitch 3s infinite alternate-reverse;
+	animation-delay: 4s;
+}
+
 .about {
 	@include pageSetup(100vh, 1440px);
 	&__heading {
@@ -21,6 +33,48 @@
 		}
 		&__wrapper {
 			margin-bottom: 2em;
+		}
+		&__hobbies {
+			@include themed() {
+				background-color: t($bg);
+			}
+			animation: fadeWhite 4s forwards;
+			animation-delay: 2s;
+			position: relative;
+			&--1 {
+				white-space: nowrap;
+				&:after {
+					@include gitchText(1px, 'drums');
+				}
+				&:before {
+					@include gitchText(-1px, 'drums');
+				}
+			}
+			&--2 {
+				&:after {
+					@include gitchText(1px, 'gym');
+				}
+				&:before {
+					@include gitchText(-1px, 'gym');
+				}
+			}
+			&--3 {
+				&:after {
+					@include gitchText(1px, 'game');
+				}
+				&:before {
+					@include gitchText(-1px, 'game');
+				}
+			}
+		}
+		&__gif {
+			position: absolute;
+			top: -135px;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			width: 180px;
+			height: 130px;
 		}
 	}
 	&__tools {
@@ -48,6 +102,21 @@
 			&::after {
 				width: 148px;
 			}
+		}
+	}
+}
+
+@keyframes fadeWhite {
+	100% {
+		color: $highlight;
+	}
+}
+
+@keyframes glitch {
+	$steps: 20;
+	@for $i from 0 through $steps {
+		#{percentage($i * (1 / $steps))} {
+			clip: rect(random(100) + px, 9999px, random(100) + px, 0);
 		}
 	}
 }

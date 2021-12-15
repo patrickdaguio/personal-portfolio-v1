@@ -4,6 +4,12 @@ import baffle from 'baffle';
 
 gsap.registerPlugin(ScrollTrigger);
 
+window.addEventListener('load', () => {
+	dateToday();
+	greetingsGenerator();
+	setInterval(greetingsGenerator, 3500);
+});
+
 // Navbar Active State
 const sections = document.querySelectorAll('section');
 const navbarLinks = document.querySelectorAll('.header__nav__list__link');
@@ -40,18 +46,22 @@ window.addEventListener('scroll', function () {
 });
 
 // Theme Changer
-const themeBtn = document.querySelector('.theme-changer');
+const themeBtns = document.querySelectorAll('.theme-changer');
 const body = document.querySelector('body');
 
-themeBtn.addEventListener('click', () => {
-	if (body.classList[0] == 'theme--dark') {
-		body.style.backgroundColor = '#fff';
-		body.classList.replace('theme--dark', 'theme--light');
-	} else {
-		body.style.backgroundColor = '#171717';
-		body.classList.replace('theme--light', 'theme--dark');
-	}
-	body.classList.toggle('scroll-bar');
+console.log(themeBtns);
+
+themeBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		if (body.classList[0] == 'theme--dark') {
+			body.style.backgroundColor = '#fff';
+			body.classList.replace('theme--dark', 'theme--light');
+		} else {
+			body.style.backgroundColor = '#171717';
+			body.classList.replace('theme--light', 'theme--dark');
+		}
+		body.classList.toggle('scroll-bar');
+	});
 });
 
 // Heading Animation
@@ -78,7 +88,7 @@ const tlHome = gsap.timeline({
 
 tlHome
 	.to(logoPaths[0], { duration: 2, strokeDashoffset: 0 })
-	.to(logoPaths[1], { duration: 2, strokeDashoffset: 0 }, 0.8)
+	.to(logoPaths[1], { duration: 2, strokeDashoffset: 0 }, 0.9)
 	.to('.logo', { fill: 'white' }, 1.6)
 	.to('.logo', { duration: 0.1, scale: 0, transformOrigin: '50% 50%' }, 2.2)
 	.to(
@@ -90,7 +100,7 @@ tlHome
 		},
 		2.6
 	)
-	.to('body', { overflow: 'auto' }, 2.6)
+	.to('body', { overflowY: 'auto' }, 2.6)
 
 	.from(
 		'.header__logo',
@@ -285,3 +295,100 @@ landingPageProjects.forEach((proj, i) => {
 		proj.classList.add('portfolio__project__choices__choice--active');
 	});
 });
+
+// Date Today
+
+function dateToday() {
+	let date = new Date();
+	const days = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+		'Sunday'
+	];
+
+	const today = document.querySelector('.contact__date');
+	today.textContent = `${days[date.getDay()]}`;
+}
+
+// Word Greetings Generator
+
+let uniqueNumbersArray = [];
+
+function generateUniqueRandom(maxNr) {
+	//Generate random number
+	let random = Math.floor(Math.random() * maxNr.length);
+	if (!uniqueNumbersArray.includes(random)) {
+		uniqueNumbersArray.push(random);
+		return random;
+	} else {
+		if (uniqueNumbersArray.length < maxNr.length) {
+			//Recursively generate number
+			return generateUniqueRandom(maxNr);
+		} else {
+			uniqueNumbersArray = [];
+			return generateUniqueRandom(maxNr);
+		}
+	}
+}
+
+function greetingsGenerator() {
+	const adjectiveSpan = document.querySelector('.contact__adjective');
+	const greetings = [
+		'rad',
+		'great',
+		'fun',
+		'beautiful',
+		'phenomenal',
+		'fantastic',
+		'groovy',
+		'bedazzling',
+		'splendid',
+		'positive',
+		'bombastic',
+		'brilliant',
+		'vibey',
+		'memorable',
+		'dope',
+		'joyful',
+		'juicy'
+	];
+	let chosenWord = greetings[generateUniqueRandom(greetings)];
+	adjectiveSpan.textContent = chosenWord;
+	const adjective = baffle('.contact__adjective');
+	adjective.set({
+		characters: '▒<▓ ▓█//< ▓>▒▒/ ▒>▒ ▓▒░█▒ ▒▒▒█ █░█ ░▓░/ ▓▒▓█',
+		speed: 100
+	});
+	adjective.start();
+	adjective.reveal(1000);
+}
+
+const items = document.querySelectorAll('.about__details__hobbies');
+
+items.forEach(el => {
+	const image = el.querySelector('img');
+
+	el.addEventListener('mouseenter', e => {
+		gsap.to(image, { autoAlpha: 1 });
+	});
+
+	el.addEventListener('mouseleave', e => {
+		gsap.to(image, { autoAlpha: 0 });
+	});
+});
+
+// Hamburger Menu
+
+const hamburgerMenu = document.querySelector('.header__hamburger');
+
+hamburgerMenu.addEventListener('click', () => {
+	header.classList.toggle('mobile__nav');
+	body.classList.toggle('disable-scroll');
+});
+
+document.addEventListener('click', e => console.log(e.target));

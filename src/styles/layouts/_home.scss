@@ -7,4 +7,10 @@
 	&__btn-wrapper {
 		margin-top: 2.5em;
 	}
+	&__name {
+		font-size: clamp(32px, 7vw, 74px);
+	}
+	&__caption {
+		font-size: clamp(24px, 6vw, 54px);
+	}
 }

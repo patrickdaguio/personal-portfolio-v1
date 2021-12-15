@@ -1,0 +1,37 @@
+.header {
+	&__mobile-wrapper {
+		display: none;
+		@include mQ('m') {
+			display: block;
+		}
+	}
+	&__hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border: none;
+		outline: none;
+		height: 20px;
+		background-color: transparent;
+		cursor: pointer;
+		z-index: 15;
+		&__bar {
+			height: 2px;
+			display: inline-block;
+			transition: all 0.3s ease-in-out;
+			@include themed() {
+				background-color: t($text);
+			}
+			margin-left: auto;
+			&--top {
+				width: 33px;
+			}
+			&--mid {
+				width: 24px;
+			}
+			&--bot {
+				width: 36px;
+			}
+		}
+	}
+}

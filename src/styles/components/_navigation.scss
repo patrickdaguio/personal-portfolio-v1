@@ -1,16 +1,27 @@
 .header {
 	z-index: 10;
 	&__nav {
+		@include flex-display(flex, center, space-between);
+		width: 100%;
 		&__list {
 			display: flex;
+			align-items: center;
+			@include mQ('m') {
+				display: none;
+			}
 			&__item {
 				&:not(:last-child) {
 					margin-right: 2.5em;
+					@include mQ('l') {
+						margin-right: 1.5em;
+					}
+				}
+				&:last-child {
+					display: inline-flex;
 				}
 			}
 			&__link {
 				position: relative;
-
 				transition: 0.3s;
 				@include font-source(
 					$heading-font-family,

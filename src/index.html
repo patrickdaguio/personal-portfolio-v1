@@ -25,8 +25,8 @@
 		<div class="container">
 			<header class="header">
 				<div class="header__wrapper">
-					<a href="/" class="header__logo"><h1>PD</h1></a>
 					<nav class="header__nav">
+						<a href="/" class="header__logo"><h1>PD</h1></a>
 						<ul class="header__nav__list">
 							<li class="header__nav__list__item">
 								<a href="#home-section" class="home-section header__nav__list__link header__nav__list__link--active">&#60;Home/&#62;</a>
@@ -50,6 +50,66 @@
 								</svg>
 							</li>
 						</ul>
+						<div class="header__mobile-wrapper">
+							<button class="header__hamburger">							
+								<div class="header__hamburger__bar header__hamburger__bar--top"></div>
+								<div class="header__hamburger__bar header__hamburger__bar--mid"></div>
+								<div class="header__hamburger__bar header__hamburger__bar--bot"></div>
+							</button>
+							<div class="header__menu-wrapper">
+								<nav class="header__menu">
+									<ul class="header__menu__list">
+										<li class="header__menu__list__item heading-xs">								
+											<a href="#home-section" class="home-section header__menu__list__link primary">&#60;Home/&#62;</a>
+										</li>
+										<li class="header__menu__list__item heading-xs">								
+											<a href="#about-section" class="about-section header__menu__list__link primary">&#60;About/&#62;</a>
+										</li>
+										<li class="header__menu__list__item heading-xs">								
+											<a href="#portfolio-section" class="portfolio-section header__menu__list__link primary">&#60;Projects/&#62;</a>
+										</li>
+										<li class="header__menu__list__item heading-xs">								
+											<a href="#contact-section" class="contact-section header__menu__list__link primary">&#60;Contact/&#62;</a>
+										</li>
+										<li class="header__menu__list__item header__menu__list__item--theme">
+											<svg class="theme-changer" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+												<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<g id="ic_fluent_dark_theme_24_regular" fill="#c4c4c4" fill-rule="nonzero">
+														<path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20.5 L12,3.5 C16.6944204,3.5 20.5,7.30557963 20.5,12 C20.5,16.6944204 16.6944204,20.5 12,20.5 Z" id="🎨-Color"></path>
+													</g>
+												</g>
+											</svg>
+										</li>
+									</ul>
+									<ul class="header__menu__socials">
+										<li class="header__menu__socials__item">
+											<a href="https://github.com/patrickdaguio" target="_blank">
+												<svg class="header__menu__socials__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M20.1146 5.90134C20.0334 5.79355 19.9466 5.69008 19.8546 5.59134C19.9471 5.34478 20.0174 5.09043 20.0646 4.83134C20.2039 3.88353 20.0829 2.91568 19.7146 2.03134C19.7146 2.03134 18.5946 1.68134 16.0246 3.41134C14.9335 3.11007 13.8065 2.95868 12.6746 2.96134C11.5394 2.95935 10.4092 3.11072 9.31458 3.41134C6.74458 1.66134 5.62458 2.03134 5.62458 2.03134C5.26068 2.90633 5.13976 3.86333 5.27458 4.80134C5.32203 5.0712 5.39572 5.33579 5.49458 5.59134C5.40458 5.69134 5.31458 5.80134 5.23458 5.90134C4.48835 6.83734 4.09223 8.00447 4.11458 9.20134C4.11221 9.48519 4.12556 9.76896 4.15458 10.0513C4.47452 14.4813 7.42458 15.5113 10.2346 15.8313C9.83684 16.2012 9.56715 16.688 9.46458 17.2213C9.37163 17.577 9.32789 17.9438 9.33458 18.3113V19.6209C8.21636 19.7203 7.0681 19.5576 6.71239 18.5596C6.32999 17.6046 5.69605 16.771 4.87792 16.1475C4.81847 16.1149 4.76192 16.0774 4.70892 16.0352C4.63708 15.8462 4.50973 15.6834 4.34362 15.5682C4.17751 15.453 3.98041 15.3907 3.77826 15.3896H3.77345C3.50905 15.3895 3.25538 15.4942 3.06796 15.6807C2.88055 15.8672 2.77465 16.1204 2.77345 16.3848C2.76955 17.1973 3.58254 17.7217 3.91603 17.9004C4.30496 18.2923 4.61787 18.7528 4.83888 19.2588C5.20314 20.2822 6.26808 21.8369 9.3047 21.6348C9.3057 21.6699 9.3067 21.7031 9.30715 21.7334L9.31154 22.001C9.31151 22.1323 9.33735 22.2624 9.38759 22.3837C9.43783 22.5051 9.51149 22.6153 9.60436 22.7082C9.69722 22.801 9.80748 22.8747 9.92882 22.9249C10.0502 22.9752 10.1802 23.001 10.3115 23.001L10.3147 23.0004V23.001H15.0258C15.1571 23.0011 15.2872 22.9752 15.4085 22.925C15.5298 22.8747 15.6401 22.8011 15.733 22.7082C15.8258 22.6153 15.8995 22.5051 15.9497 22.3837C16 22.2624 16.0258 22.1324 16.0258 22.001C16.0258 22.001 16.0331 18.8414 16.0331 18.3114C16.0398 17.9438 15.996 17.5771 15.9031 17.2214L15.9013 17.2153L15.9046 17.2214C15.896 17.1864 15.8829 17.1579 15.8735 17.1239C15.7619 16.6286 15.5039 16.1782 15.133 15.8313L15.1446 15.8522C15.1378 15.846 15.1314 15.8373 15.1246 15.8313C17.9346 15.5113 20.8646 14.4613 21.1846 10.0513C21.2136 9.76895 21.2269 9.48518 21.2246 9.20133C21.2423 8.00685 20.8506 6.8423 20.1146 5.90134V5.90134Z" fill="white"/>
+												</svg>
+											</a>
+										</li>
+										<li class="header__menu__socials__item">
+											<a href="https://www.linkedin.com/in/patrick-daguio/"  target="_blank">
+												<svg class="header__menu__socials__icon" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_146_4)">
+													<path d="M0 4.26257C0 3.23295 0.360371 2.38353 1.08108 1.71431C1.80179 1.04506 2.73875 0.710449 3.89189 0.710449C5.02446 0.710449 5.94079 1.0399 6.64093 1.69887C7.36164 2.3784 7.72201 3.26384 7.72201 4.35524C7.72201 5.34365 7.37195 6.16731 6.67181 6.82628C5.9511 7.50582 5.00386 7.84558 3.83012 7.84558H3.79923C2.66666 7.84558 1.75033 7.50582 1.05019 6.82628C0.350054 6.14674 0 5.29216 0 4.26257ZM0.401544 31.2896V10.6564H7.25869V31.2896H0.401544ZM11.0579 31.2896H17.9151V19.7684C17.9151 19.0476 17.9974 18.4916 18.1622 18.1004C18.4504 17.4003 18.888 16.8082 19.4749 16.3243C20.0618 15.8404 20.7979 15.5985 21.6834 15.5985C23.9897 15.5985 25.1429 17.1532 25.1429 20.2626V31.2896H32V19.4595C32 16.4119 31.2793 14.1004 29.8378 12.5251C28.3964 10.9498 26.4916 10.1622 24.1236 10.1622C21.4672 10.1622 19.3977 11.305 17.9151 13.5908V13.6525H17.8842L17.9151 13.5908V10.6564H11.0579C11.0991 11.3153 11.1197 13.3642 11.1197 16.8031C11.1197 20.242 11.0991 25.0708 11.0579 31.2896Z" fill="white"/></g><defs><clipPath id="clip0_146_4"><rect width="32" height="32" fill="white"/></clipPath></defs>
+												</svg>
+											</a>
+										</li>
+										<li class="header__menu__socials__item">
+											<a href="mailto:patrickdaguio@outlook.com" target="_blank">
+												<svg class="header__menu__socials__icon"  width="24" height="24" enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+													<g id="Glyph_copy_2">
+														<path d="M63.125,9.977c-0.902-1.321-2.419-2.194-4.131-2.194H5.006c-1.676,0-3.158,0.842-4.067,2.117l31.16,25.982L63.125,9.977z"/>
+														<path d="M0.006,14.328v36.889c0,2.75,2.25,5,5,5h53.988c2.75,0,5-2.25,5-5V14.461L32.099,41.09L0.006,14.328z"/>
+													</g>
+												</svg>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
 					</nav>
 				</div>
 			</header>
@@ -76,7 +136,7 @@
 				<a class="sidebar__email text-s primary light" href="mailto:patrickdaguio@outlook.com" target="_blank">patrickdaguio@outlook.com</a>
 			</aside>
 
-			<main class="main">
+ 			<main class="main">
 				<section class="hero" id="home-section">
 					<div class="hero__content-wrapper">
 						<h1 class="text-xl primary base hero__intro">Hello, I am</h1>
@@ -90,29 +150,32 @@
 						</div>
 					</div>
 				</section>
-
+ 
 				<section class="about" id="about-section">
 					<h1 class="heading-m bold about__heading">&#60;About&#62;</h1>
 					<div class="about__content-wrapper">
 						<div class="about__details">
 							<div class="about__details__wrapper">
 								<p class="text-l base about__details__text">
-									I am a <span class="highlight">Frontend Developer</span> . 
+									Hello there! My name is Patrick Daguio, a <span class="highlight">Frontend developer</span> who loves food and all things web.
 								</p>
 								<p class="text-l base about__details__text">
 									Ever since designing and creating my first website, I have been hooked with the idea of using software to not only <span class="highlight">solve practical problems</span> but it also provides an avenue to bring <span class="highlight">innovation to life</span>.
 								</p>
 
 								<p class="text-l base about__details__text">
-									I follow the <span class="highlight">Kaizen</span> lifestyle which aims to improve at what they do everyday. I am always looking for ways to learn and grow my knowledge in all aspects of the web to achieve my long term goal of being a <span class="highlight">Full-stack Developer</span>.
+									Following the <span class="highlight">Kaizen</span> lifestyle, I am always looking for ways to learn and grow my knowledge in all aspects of the web to achieve my long term goal of being a <span class="highlight">Full-stack Developer</span>.
 								</p>
 								<p class="text-l base about__details__text">
-									When I’m not coding, you can expect to find me either behind the <span class="highlight">drums</span>, in the <span class="highlight">gym</span> or being competitive at a <span class="highlight">game</span>.
+									When I’m not coding, you can expect to find me either behind the 
+									<span class="about__details__hobbies about__details__hobbies--1 highlight">drums <img class="about__details__gif" src="../public/gifs/drums.gif"></span>, in the 
+									<span class="about__details__hobbies about__details__hobbies--2 highlight">gym <img class="about__details__gif" src="../public/gifs/gym.gif"></span> or being competitive at a 
+									<span class="about__details__hobbies about__details__hobbies--3 highlight">game <img class="about__details__gif" src="../public/gifs/games.gif"></span>.
 								</p>
 							</div>
 							<div class="about__btn-wrapper">
 								<a href="#contact-section"><button class="btn about__btn__projects btn--yellow">Contact Me</button></a>
-								<button class="btn about__btn__cv btn--white">Download CV</button>
+								<a href="../public/cv.pdf" target="_blank"><button class="btn about__btn__cv btn--white">Download CV</button></a>
 							</div>
 						</div>
 						<div class="about__tools">
@@ -197,7 +260,6 @@
 									<div class="portfolio__project__desc-wrapper">
 										<p class="text-s base portfolio__project__description">
 											An all-in-one productivity tool and personal dashboard to use as a Google extension. 	
-										</br>								
 											Features include pomodoro timer, todo list, bookmark links, custom quotes, mantras and more.
 											Uses OpenWeatherMap and Unsplash API to gather weather and photo information. 
 										</p>
@@ -314,7 +376,7 @@
 									<h2 class="portfolio__project__name heading-s">Landing Pages</h2>
 									<div class="portfolio__project__desc-wrapper">
 										<p class="text-s base portfolio__project__description">
-											A collection of different fully-responsive landing pages to improve on my design and front-end skills.
+											A collection of different fully-responsive landing pages to improve on my design and front-end skills. 
 										</p>
 									</div>
 									<ul class="portfolio__project__skills-wrapper">
@@ -358,13 +420,13 @@
 								Stay cool &
 							</h3>
 							<h3 class="heading-s bold highlight contact__greeting">
-								Have and <span class="contact__adjective">amazing</span> <span class="contact__date">Sunday</span>
+								Have a <span class="contact__adjective">amazing</span> <span class="contact__date">Sunday</span>
 							</h3>
 						</div>
 						<div class="contact__form-wrapper">
 							<h2 class="heading-xs contact__form-heading">Drop me a message</h2>
 							<p class="text-s contact__form-email">Don’t like forms? Send me an <a href="mailto:patrickdaguio@outlook.com" target="_blank" class="contact__form__email">email</a></p>
-							<div class="contact__form">
+							<form class="contact__form">
 								<div class="contact__form__input-wrapper">
 									<label for="name">Name</label>
 									<input class="contact__form__input contact__form__name" name="name" placeholder=" " type="text" required autocorrect="off"> 
@@ -381,11 +443,11 @@
 									<span class="contact__form__label">Message</span>
 								</div>
 								<button class="btn contact__form__btn btn--white" type="submit" title="Submit">Send</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</section>
-			</main>
+			</main> 
 
 			<footer class="footer">
 				<p class="text-m light footer__copyright">© 2021 <span class="highlight">Patrick Daguio</span>. All rights reserved.</p>

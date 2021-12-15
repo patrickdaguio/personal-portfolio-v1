@@ -1,4 +1,7 @@
 .sidebar {
+	@include mQ('m') {
+		display: none;
+	}
 	position: fixed;
 	bottom: 0;
 	&::after {
@@ -13,9 +16,12 @@
 	}
 	&--left {
 		left: 64px;
+		@include mQ('l') {
+			left: 40px;
+		}
 	}
 	&--right {
-		right: 64px;
+		right: 40px;
 	}
 	&__email {
 		writing-mode: vertical-lr;
