@@ -384,11 +384,53 @@ items.forEach(el => {
 
 // Hamburger Menu
 
+const tlMobile = gsap.timeline({
+	defaults: {
+		duration: 0.3,
+		ease: 'power4.easeInAndOut',
+		onComplete: function () {
+			playing = false;
+		}
+	}
+});
+
+let playing = false;
+
+tlMobile
+	.from('.header__menu__list__item', {
+		opacity: 0,
+		translateX: '250px',
+		stagger: 0.1
+	})
+	.from(
+		'.header__menu__socials__item',
+		{
+			translateY: '250px',
+			stagger: 0.1
+		},
+		0.1
+	);
+
 const hamburgerMenu = document.querySelector('.header__hamburger');
 
 hamburgerMenu.addEventListener('click', () => {
 	header.classList.toggle('mobile__nav');
 	body.classList.toggle('disable-scroll');
+	playTl();
 });
 
-document.addEventListener('click', e => console.log(e.target));
+function playTl() {
+	if (!playing) {
+		playing = true;
+		tlMobile.progress(0).play();
+	}
+}
+
+const menuListItems = document.querySelectorAll('.header__menu__list__item');
+
+menuListItems.forEach(item => {
+	item.addEventListener('click', () => {
+		header.classList.toggle('mobile__nav');
+		body.classList.toggle('disable-scroll');
+	});
+});

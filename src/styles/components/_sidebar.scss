@@ -21,7 +21,10 @@
 		}
 	}
 	&--right {
-		right: 40px;
+		@include mQ('l') {
+			right: 40px;
+		}
+		right: 64px;
 	}
 	&__email {
 		writing-mode: vertical-lr;

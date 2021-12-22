@@ -34,6 +34,32 @@
 	height: 44px;
 	z-index: -1;
 	transition: 0.3s;
+	@include mQ('m') {
+		height: 38px;
+		right: -9px;
+	}
+	@include mQ('xs') {
+		height: 35px;
+		top: 6px;
+		right: -8px;
+	}
+	@include mQ('xxs') {
+		height: 31px;
+	}
+}
+
+@mixin gitchText($offset, $text) {
+	content: $text;
+	position: absolute;
+	left: $offset;
+	top: $offset;
+	clip: rect(0, 900px, 0, 0);
+	@include themed() {
+		background-color: t($bg);
+	}
+	color: $highlight;
+	animation: glitch 3s infinite alternate-reverse;
+	animation-delay: 4s;
 }
 
 @mixin btnBeforeBorder($color) {

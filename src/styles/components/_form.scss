@@ -7,6 +7,15 @@
 		padding: 0.5em 2em;
 		&::after {
 			width: 115px;
+			@include mQ('m') {
+				width: 102px;
+			}
+			@include mQ('xs') {
+				width: 91px;
+			}
+			@include mQ('xxs') {
+				width: 82px;
+			}
 		}
 	}
 	&__input-wrapper {
@@ -24,6 +33,9 @@
 		background: none;
 		@include font-source($base-font-family, 1em, $base-font-weight, $text);
 		outline: none;
+		@include mQ('s') {
+			font-size: 0.9em;
+		}
 		@include themed() {
 			border-bottom: 1px solid t($text);
 		}
@@ -48,6 +60,9 @@
 		transform-origin: 0 0;
 		transition: transform 120ms ease-in;
 		line-height: 1.2;
+		@include mQ('m') {
+			font-size: 0.9em;
+		}
 	}
 }
 

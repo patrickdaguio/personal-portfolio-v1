@@ -1,11 +1,21 @@
 .portfolio {
 	@include pageSetup(auto, 1440px);
-	padding: 5.5em 0em;
+	padding: 5em 0em;
 	&__heading {
 		margin-bottom: 1.5em;
 		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+		@include mQ('l') {
+			margin-bottom: 1em;
+		}
+		@include mQ('m') {
+			font-size: 2.3em;
+		}
+		@include mQ('xs') {
+			margin-bottom: 0.75em;
+			font-size: 1.8em;
+		}
 	}
 	&__content-wrapper {
 		max-width: 1300px;
@@ -24,24 +34,84 @@
 
 		&:not(:last-of-type) {
 			margin-bottom: 4em;
+			@include mQ('s') {
+				margin-bottom: 3em;
+			}
 		}
 		&__content {
 			position: relative;
 			grid-area: 1 / 1 / -1 / 8;
+			@include mQ('xl') {
+				grid-area: 1 / 1 / -1 / 10;
+			}
+			@include mQ('l') {
+				grid-column: 1 / -1;
+				padding: 1.5em;
+			}
+			@include mQ('s') {
+				padding: 0em 1em;
+			}
+			@include mQ('xs') {
+				padding: 0em 0.75em;
+			}
 		}
 		&__carousel {
 			display: flex;
 			transform-style: preserve-3d;
 			transition: transform 0.5s;
+			max-width: 607px;
+			@include mQ('l') {
+				width: 100%;
+				max-width: none;
+				position: relative;
+				height: 350px;
+			}
+		}
+		&__image {
+			@include mQ('l') {
+				width: 100%;
+				flex: 0 0 100%;
+			}
 		}
 		&__image-wrapper {
 			grid-area: 1 / 6 / -1 / -1;
-			width: 607px;
 			justify-self: flex-end;
 			overflow: hidden;
 			position: relative;
+			@include flex-display(flex, center, center);
+			@include mQ('l') {
+				grid-column: 1 / -1;
+				width: 100%;
+				justify-self: center;
+				height: 350px;
+				&::after {
+					position: absolute;
+					content: '';
+					width: 100%;
+					height: 350px;
+					top: 0;
+					left: 0;
+					background-color: $dark-bg-opacity;
+				}
+			}
+			&--carousel {
+				height: auto;
+			}
 			img {
+				max-width: 100%;
+				height: auto;
 				box-shadow: 0 10px 30px -15px $dark-bg-opacity;
+				position: relative;
+				@include mQ('l') {
+					box-shadow: none;
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+					object-position: center center;
+				}
+			}
+			&:not(:last-child) {
+				display: block;
 			}
 		}
 		&__choices {
@@ -74,29 +144,85 @@
 		&__skills-wrapper {
 			@include flex-display(flex, center, flex-end);
 			margin: 1em 0em;
+			@include mQ('l') {
+				justify-content: flex-start;
+				margin-top: 0em;
+				margin-bottom: 1em;
+			}
+			@include mQ('s') {
+				width: 100%;
+				flex-wrap: wrap;
+			}
 		}
 		&__socials-wrapper {
 			@include flex-display(flex, center, flex-end);
+			@include mQ('l') {
+				justify-content: flex-start;
+			}
 		}
 		&__name {
 			margin-bottom: 0.25em;
+			@include mQ('l') {
+				margin-bottom: 0em;
+				font-size: 1.8em;
+				color: $white;
+			}
+			@include mQ('m') {
+				color: $highlight;
+			}
+			@include mQ('s') {
+				font-size: 1.5em;
+			}
 		}
+		&__number {
+			@include mQ('l') {
+				font-size: 0.9em;
+			}
+			@include mQ('m') {
+				display: none;
+			}
+		}
+		&__description {
+			@include mQ('l') {
+				color: $white;
+			}
+			@include mQ('s') {
+				font-size: 0.85em;
+			}
+		}
+
 		&__desc-wrapper {
 			box-shadow: 0 10px 30px -15px $dark-bg-opacity;
 			@include themed() {
 				background-color: t($card);
 			}
+			@include mQ('l') {
+				background-color: transparent !important;
+				box-shadow: none;
+				padding: 1em 0em;
+			}
 			padding: 1em 1.5em;
 			line-height: 1.5em;
 		}
 		&__skill {
-			&:not(:first-child) {
-				margin-left: 1em;
+			&:not(:last-child) {
+				margin-right: 1em;
 			}
 			padding: 0.2em 1em;
 			text-align: center;
 			@include themed() {
 				background-color: t($card);
+			}
+			@include mQ('l') {
+				background-color: transparent !important;
+				padding: 0.35em 0em;
+				color: $white;
+				&:not(:last-child) {
+					margin-right: 2em;
+				}
+			}
+			@include mQ('s') {
+				font-size: 0.8em;
 			}
 		}
 		&__link {
@@ -105,6 +231,16 @@
 			}
 			transition: 0.2s;
 
+			@include mQ('l') {
+				svg {
+					height: 20px;
+					width: 20px;
+					* {
+						fill: $white !important;
+						stroke: $white !important;
+					}
+				}
+			}
 			svg {
 				* {
 					@include themed() {
@@ -129,11 +265,24 @@
 .portfolio__project:nth-child(odd) .portfolio__project__content {
 	grid-column: 6 / -1;
 	text-align: right;
+	@include mQ('xl') {
+		grid-column: 4 / -1;
+	}
+	@include mQ('l') {
+		grid-column: 1 / -1;
+		text-align: left;
+	}
 }
 
 .portfolio__project:nth-child(odd) .portfolio__project__image-wrapper {
 	grid-column: 1 / 8;
 	justify-self: flex-start;
+	@include mQ('l') {
+		justify-self: center;
+	}
+	@include mQ('l') {
+		grid-column: 1 / -1;
+	}
 }
 
 .portfolio__project:nth-child(even) .portfolio__project__skills-wrapper,

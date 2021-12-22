@@ -10,13 +10,31 @@
 		$bold-font-weight,
 		$button-text
 	);
+	@include mQ('m') {
+		font-size: 1em;
+	}
+	@include mQ('xs') {
+		font-size: 0.9em;
+	}
+	@include mQ('xxs') {
+		font-size: 0.8em;
+	}
 	padding: 0.5em 1.25em;
 	&--yellow {
 		background-color: $highlight;
 		color: $white !important;
-
+		margin-right: 2.75em;
 		&::after {
 			@include btnAfterBorder($text-highlight, 117px);
+			@include mQ('m') {
+				width: 106px;
+			}
+			@include mQ('xs') {
+				width: 93px;
+			}
+			@include mQ('xxs') {
+				width: 84px;
+			}
 		}
 		&::before {
 			@include btnBeforeBorder($text-highlight);
@@ -29,13 +47,19 @@
 		}
 		&::after {
 			@include btnAfterBorder($button-bg, 165px);
+			@include mQ('m') {
+				width: 150px;
+			}
+			@include mQ('xs') {
+				width: 130px;
+			}
+			@include mQ('xxs') {
+				width: 116px;
+			}
 		}
 		&::before {
 			@include btnBeforeBorder($button-bg);
 		}
-	}
-	&:first-child {
-		margin-right: 2.75em;
 	}
 	&:hover {
 		transform: translate(2px, 1px);
@@ -47,6 +71,9 @@
 			top: 0px;
 			right: 0px;
 			height: 40px;
+			@include mQ('m') {
+				height: 34px;
+			}
 		}
 	}
 	&:active {

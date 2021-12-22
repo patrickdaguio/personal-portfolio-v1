@@ -1,7 +1,14 @@
 footer {
-	@include flex-display(flex, center, center);
-	height: 6vh;
+	@include flex-display(flex, flex-end, center);
+	height: 5vh;
 	transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 		transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	@include mQ('m') {
+		font-size: 0.85em;
+	}
+	p {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 }

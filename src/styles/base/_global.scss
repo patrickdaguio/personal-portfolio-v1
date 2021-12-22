@@ -57,10 +57,24 @@ ul {
 	width: 100%;
 	padding: 0em 9.5em;
 	@include mQ('l') {
-		padding: 0em 6em;
+		padding: 0em 6.5em;
+	}
+	@include mQ('m') {
+		padding: 0em 4em;
+	}
+	@include mQ('s') {
+		padding: 0em 2.5em;
+	}
+	@include mQ('xs') {
+		padding: 0em 1.25em;
+	}
+	@include mQ('xxxs') {
+		padding: 0em 0.75em;
 	}
 }
 
 .disable-scroll {
-	overflow: hidden !important;
+	@include mQ('m') {
+		overflow: hidden !important;
+	}
 }

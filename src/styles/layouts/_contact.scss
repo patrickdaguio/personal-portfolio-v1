@@ -1,12 +1,28 @@
 .contact {
-	@include pageSetup(94vh, 1440px);
-
+	@include pageSetup(100vh, 1440px);
+	@include mQ('l') {
+		height: auto;
+		padding: 5em 0em;
+	}
 	&__heading {
 		margin-bottom: 1.5em;
+		@include mQ('l') {
+			margin-bottom: 1em;
+		}
+		@include mQ('m') {
+			font-size: 2.3em;
+		}
+		@include mQ('xs') {
+			margin-bottom: 0.75em;
+			font-size: 1.8em;
+		}
 	}
 	&__content-wrapper {
 		width: 100%;
 		@include flex-display(flex, flex-start, space-between);
+		@include mQ('l') {
+			flex-direction: column;
+		}
 	}
 	&__message-wrapper {
 		margin-right: 4em;
@@ -14,16 +30,54 @@
 		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+		@include mQ('xl') {
+			margin-right: 2.5em;
+		}
+		@include mQ('l') {
+			margin-right: 0em;
+			max-width: none;
+		}
 	}
 	&__message {
 		margin-bottom: 1em;
+		@include mQ('l') {
+			font-size: 1.1em;
+		}
+		@include mQ('s') {
+			font-size: 0.95em;
+		}
 	}
 	&__message-heading {
 		margin-bottom: 1.5em;
+		@include mQ('l') {
+			font-size: 1.75em;
+			margin-bottom: 0.75em;
+		}
+		@include mQ('s') {
+			font-size: 1.5em;
+		}
 	}
 	&__greeting {
-		&:not(:last-child) {
+		@include mQ('l') {
+			font-size: 1.75em;
+		}
+		@include mQ('s') {
+			font-size: 1.4em;
+		}
+		@include mQ('xs') {
+			font-size: 1.2em;
+		}
+		&--top {
 			margin-top: 1em;
+			@include mQ('l') {
+				margin-top: 0em;
+				margin-right: 0.1em;
+			}
+		}
+		&--bot {
+			@include mQ('l') {
+				margin-bottom: 1.5em;
+			}
 		}
 	}
 	&__form-wrapper {
@@ -31,9 +85,19 @@
 		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+		@include mQ('xl') {
+			min-width: 300px;
+		}
+		@include mQ('l') {
+			min-width: 0;
+			width: 100%;
+		}
 	}
 	&__form-email {
 		margin-bottom: 2.25em;
+		@include mQ('s') {
+			font-size: 0.8em;
+		}
 		a {
 			text-decoration: none;
 			outline: none;
@@ -61,6 +125,12 @@
 		}
 	}
 	&__form-heading {
-		margin: 0.5em 0em;
+		margin-bottom: 0.5em;
+		@include mQ('l') {
+			font-size: 1.6em;
+		}
+		@include mQ('s') {
+			font-size: 1.4em;
+		}
 	}
 }

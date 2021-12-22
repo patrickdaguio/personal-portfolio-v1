@@ -1,18 +1,20 @@
-@mixin gitchText($offset, $text) {
-	content: $text;
-	position: absolute;
-	left: $offset;
-	top: $offset;
-	clip: rect(0, 900px, 0, 0);
-	background-color: $dark-bg;
-	color: $highlight;
-	animation: glitch 3s infinite alternate-reverse;
-	animation-delay: 4s;
-}
-
 .about {
 	@include pageSetup(100vh, 1440px);
+	@include mQ('l') {
+		height: auto;
+		padding: 5em 0em;
+	}
 	&__heading {
+		@include mQ('l') {
+			margin-bottom: 1em;
+		}
+		@include mQ('m') {
+			font-size: 2.3em;
+		}
+		@include mQ('xs') {
+			margin-bottom: 0.75em;
+			font-size: 1.8em;
+		}
 		margin-bottom: 1.5em;
 		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
@@ -20,16 +22,32 @@
 	}
 	&__content-wrapper {
 		width: 100%;
+		position: relative;
+
 		@include flex-display(flex, flex-start, space-between);
+		@include mQ('l') {
+			display: block;
+		}
 	}
 	&__details {
+		@include mQ('l') {
+			max-width: none;
+			margin: 0;
+		}
+
 		margin-right: 4em;
 		max-width: 700px;
 		transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 			transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 		&__text {
-			margin-bottom: 1em;
+			margin-bottom: 0.75em;
+			@include mQ('l') {
+				font-size: 1.1em;
+			}
+			@include mQ('s') {
+				font-size: 0.95em;
+			}
 		}
 		&__wrapper {
 			margin-bottom: 2em;
@@ -41,8 +59,9 @@
 			animation: fadeWhite 4s forwards;
 			animation-delay: 2s;
 			position: relative;
+			white-space: nowrap;
+
 			&--1 {
-				white-space: nowrap;
 				&:after {
 					@include gitchText(1px, 'drums');
 				}
@@ -75,6 +94,32 @@
 			pointer-events: none;
 			width: 180px;
 			height: 130px;
+			@include mQ('l') {
+				width: 150px;
+				height: 100px;
+				left: 0;
+				top: -100px;
+			}
+			@include mQ('m') {
+				width: 120px;
+				height: 90px;
+				top: -90px;
+			}
+			@include mQ('xs') {
+				width: 90px;
+				height: 70px;
+				top: -72px;
+			}
+			@include mQ('xxs') {
+				width: 80px;
+				height: 60px;
+				top: -62px;
+			}
+			@include mQ('xxxs') {
+				width: 66px;
+				height: 50px;
+				top: -55px;
+			}
 		}
 	}
 	&__tools {
@@ -82,9 +127,21 @@
 			@include flex-display(grid, center, center);
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(3, 1fr);
-			gap: 1.5em 3em;
+			gap: 1.5em 2.5em;
+			@include mQ('l') {
+				@include flex-display(flex, center, flex-start);
+				flex-wrap: wrap;
+				gap: 1em 2em;
+			}
 		}
 		&__heading {
+			@include mQ('l') {
+				margin-bottom: 1em;
+				margin-top: 2em;
+			}
+			@include mQ('m') {
+				font-size: 1.4em;
+			}
 			margin-bottom: 1.35em;
 			transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 				transform 0.1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
@@ -95,12 +152,31 @@
 				opacity 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
 				transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 			transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+			svg {
+				@include mQ('l') {
+					width: 44px;
+					height: 44px;
+				}
+				@include mQ('s') {
+					width: 32px;
+					height: 32px;
+				}
+			}
 		}
 	}
 	&__btn {
 		&__projects {
 			&::after {
 				width: 148px;
+				@include mQ('m') {
+					width: 135px;
+				}
+				@include mQ('xs') {
+					width: 116px;
+				}
+				@include mQ('xxs') {
+					width: 104px;
+				}
 			}
 		}
 	}

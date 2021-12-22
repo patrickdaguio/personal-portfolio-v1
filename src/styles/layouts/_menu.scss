@@ -5,12 +5,15 @@
 		left: 0;
 		backdrop-filter: blur(4px);
 		z-index: -1;
-		background-color: $dark-bg-opacity;
+		@include themed() {
+			background-color: t($header-bg);
+		}
 		width: 100%;
 		height: 100vh;
 		padding: 6.75em 2em 2.5em 2em;
 		@include flex-display(flex, flex-end, flex-end);
-		display: none;
+		transform: translateX(100vw);
+		transition: transform 0.3s ease-in-out;
 	}
 	&__menu {
 		@include flex-display(flex, center, center);
@@ -27,13 +30,21 @@
 					margin-bottom: 1.25em;
 				}
 				&--theme {
-					position: absolute;
-					top: 36px;
-					right: 50%;
-					transform: translateX(50%);
+					@include themed() {
+						* {
+							fill: t($text);
+						}
+					}
+					&:hover {
+						@include themed() {
+							* {
+								fill: t($text);
+							}
+						}
+					}
 					svg {
-						height: 30px;
-						width: 30px;
+						height: 34px;
+						width: 34px;
 					}
 				}
 			}
@@ -74,7 +85,7 @@
 
 .mobile__nav .header {
 	&__menu-wrapper {
-		display: flex;
+		transform: translateX(0vw);
 	}
 	&__hamburger {
 		&__bar {

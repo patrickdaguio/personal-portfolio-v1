@@ -3,14 +3,41 @@
 	&__desc {
 		max-width: 750px;
 		margin-top: 1em;
+		@include mQ('m') {
+			font-size: 1.15em;
+		}
+		@include mQ('s') {
+			font-size: 1em;
+		}
+		@include mQ('xs') {
+			font-size: 0.95em;
+		}
 	}
 	&__btn-wrapper {
 		margin-top: 2.5em;
+		@include mQ('s') {
+			margin-top: 1.5em;
+		}
+	}
+	&__intro {
+		@include mQ('m') {
+			font-size: clamp(18px, 4vw, 25px);
+		}
+		@include mQ('xxxs') {
+			display: none;
+		}
 	}
 	&__name {
-		font-size: clamp(32px, 7vw, 74px);
+		@include mQ('l') {
+			font-size: clamp(42px, 7vw, 74px);
+		}
+		@include mQ('xxxs') {
+			font-size: 38px;
+		}
 	}
 	&__caption {
-		font-size: clamp(24px, 6vw, 54px);
+		@include mQ('l') {
+			font-size: clamp(32px, 6vw, 52px);
+		}
 	}
 }

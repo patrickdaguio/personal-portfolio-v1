@@ -13,12 +13,18 @@
 	@include mQ('l') {
 		padding: 0 2.5em;
 	}
+	@include mQ('xs') {
+		padding: 0em 1.25em;
+	}
+	@include mQ('xxxs') {
+		padding: 0em 0.75em;
+	}
 }
 
 .header-scroll {
 	height: 80px;
 	transform: translateY(-80px);
-	box-shadow: 0 10px 30px -15px $dark-bg-opacity;
+	box-shadow: 0 10px 24px -15px $dark-bg-opacity;
 }
 
 .header-top {
