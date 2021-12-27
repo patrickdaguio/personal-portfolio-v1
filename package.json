@@ -2,7 +2,6 @@
 	"name": "personal-portfolio-v1",
 	"version": "1.0.0",
 	"description": "Personal Portfolio Website V1",
-	"main": "index.js",
 	"scripts": {
 		"dev": "parcel src/index.html",
 		"build": "parcel build src/index.html"
@@ -18,7 +17,9 @@
 		"gsap": "^3.8.0"
 	},
 	"devDependencies": {
+		"@parcel/transformer-sass": "^2.0.1",
 		"cssnano": "^4.1.11",
+		"parcel": "^2.0.1",
 		"postcss": "^8.4.5",
 		"sass": "^1.43.4"
 	},
