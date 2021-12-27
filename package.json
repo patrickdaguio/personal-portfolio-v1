@@ -9,6 +9,10 @@
 	},
 	"author": "Patrick Daguio patrickdaguio@outlook.com",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/patrickdaguio/personal-portfolio-v1"
+	},
 	"dependencies": {
 		"baffle": "^0.3.6",
 		"gsap": "^3.8.0"
