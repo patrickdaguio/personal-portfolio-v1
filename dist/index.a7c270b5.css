@@ -1053,7 +1053,7 @@ textarea:-webkit-autofill:active {
   clip: rect(0, 900px, 0, 0);
   color: #aa9d6e;
   animation: glitch 3s infinite alternate-reverse;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 .theme--light .about__details__hobbies--1:after {
   background-color: #fff;
@@ -1069,7 +1069,7 @@ textarea:-webkit-autofill:active {
   clip: rect(0, 900px, 0, 0);
   color: #aa9d6e;
   animation: glitch 3s infinite alternate-reverse;
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
 .theme--light .about__details__hobbies--1:before {
   background-color: #fff;
@@ -1085,7 +1085,7 @@ textarea:-webkit-autofill:active {
   clip: rect(0, 900px, 0, 0);
   color: #aa9d6e;
   animation: glitch 3s infinite alternate-reverse;
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 .theme--light .about__details__hobbies--2:after {
   background-color: #fff;
@@ -1101,7 +1101,7 @@ textarea:-webkit-autofill:active {
   clip: rect(0, 900px, 0, 0);
   color: #aa9d6e;
   animation: glitch 3s infinite alternate-reverse;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 .theme--light .about__details__hobbies--2:before {
   background-color: #fff;
@@ -1117,7 +1117,7 @@ textarea:-webkit-autofill:active {
   clip: rect(0, 900px, 0, 0);
   color: #aa9d6e;
   animation: glitch 3s infinite alternate-reverse;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .theme--light .about__details__hobbies--3:after {
   background-color: #fff;
@@ -1133,7 +1133,7 @@ textarea:-webkit-autofill:active {
   clip: rect(0, 900px, 0, 0);
   color: #aa9d6e;
   animation: glitch 3s infinite alternate-reverse;
-  animation-delay: 1s;
+  animation-delay: 3s;
 }
 .theme--light .about__details__hobbies--3:before {
   background-color: #fff;
@@ -1260,67 +1260,67 @@ textarea:-webkit-autofill:active {
 }
 @keyframes glitch {
   0% {
-    clip: rect(66px, 9999px, 54px, 0);
+    clip: rect(55px, 9999px, 55px, 0);
   }
   5% {
-    clip: rect(85px, 9999px, 46px, 0);
+    clip: rect(80px, 9999px, 70px, 0);
   }
   10% {
-    clip: rect(66px, 9999px, 31px, 0);
+    clip: rect(38px, 9999px, 19px, 0);
   }
   15% {
-    clip: rect(100px, 9999px, 67px, 0);
+    clip: rect(54px, 9999px, 73px, 0);
   }
   20% {
-    clip: rect(89px, 9999px, 100px, 0);
+    clip: rect(83px, 9999px, 31px, 0);
   }
   25% {
-    clip: rect(23px, 9999px, 95px, 0);
+    clip: rect(23px, 9999px, 76px, 0);
   }
   30% {
-    clip: rect(90px, 9999px, 99px, 0);
+    clip: rect(62px, 9999px, 63px, 0);
   }
   35% {
-    clip: rect(51px, 9999px, 27px, 0);
+    clip: rect(74px, 9999px, 72px, 0);
   }
   40% {
-    clip: rect(11px, 9999px, 51px, 0);
+    clip: rect(93px, 9999px, 76px, 0);
   }
   45% {
-    clip: rect(25px, 9999px, 75px, 0);
+    clip: rect(83px, 9999px, 65px, 0);
   }
   50% {
-    clip: rect(25px, 9999px, 87px, 0);
+    clip: rect(48px, 9999px, 24px, 0);
   }
   55% {
-    clip: rect(8px, 9999px, 79px, 0);
+    clip: rect(19px, 9999px, 21px, 0);
   }
   60% {
-    clip: rect(71px, 9999px, 3px, 0);
+    clip: rect(29px, 9999px, 93px, 0);
   }
   65% {
-    clip: rect(46px, 9999px, 47px, 0);
+    clip: rect(80px, 9999px, 99px, 0);
   }
   70% {
-    clip: rect(52px, 9999px, 31px, 0);
+    clip: rect(9px, 9999px, 66px, 0);
   }
   75% {
-    clip: rect(99px, 9999px, 95px, 0);
+    clip: rect(63px, 9999px, 95px, 0);
   }
   80% {
-    clip: rect(3px, 9999px, 30px, 0);
+    clip: rect(9px, 9999px, 72px, 0);
   }
   85% {
-    clip: rect(74px, 9999px, 26px, 0);
+    clip: rect(68px, 9999px, 80px, 0);
   }
   90% {
-    clip: rect(51px, 9999px, 2px, 0);
+    clip: rect(22px, 9999px, 19px, 0);
   }
   95% {
-    clip: rect(44px, 9999px, 86px, 0);
+    clip: rect(34px, 9999px, 1px, 0);
   }
   100% {
-    clip: rect(10px, 9999px, 53px, 0);
+    clip: rect(53px, 9999px, 13px, 0);
   }
 }
 .portfolio {
