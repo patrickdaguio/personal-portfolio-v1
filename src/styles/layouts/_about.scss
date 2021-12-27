@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .about {
 	@include pageSetup(100vh, 1440px);
 	@include mQ('l') {
@@ -191,7 +193,7 @@
 @keyframes glitch {
 	$steps: 20;
 	@for $i from 0 through $steps {
-		#{percentage($i * (1 / $steps))} {
+		#{percentage($i * math.div(1, $steps))} {
 			clip: rect(random(100) + px, 9999px, random(100) + px, 0);
 		}
 	}

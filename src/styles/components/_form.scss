@@ -58,6 +58,7 @@
 		white-space: nowrap;
 		transform: translate(0, 0);
 		transform-origin: 0 0;
+		pointer-events: none;
 		transition: transform 120ms ease-in;
 		line-height: 1.2;
 		@include mQ('m') {
@@ -79,4 +80,9 @@ textarea:-webkit-autofill:active {
 	}
 	transition: background-color 99999s ease-in-out 0s,
 		color 99999s ease-in-out 0s;
+}
+
+.contact__form__error {
+	margin-top: 0.5em;
+	color: $highlight;
 }

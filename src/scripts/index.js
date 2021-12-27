@@ -49,8 +49,6 @@ window.addEventListener('scroll', function () {
 const themeBtns = document.querySelectorAll('.theme-changer');
 const body = document.querySelector('body');
 
-console.log(themeBtns);
-
 themeBtns.forEach(btn => {
 	btn.addEventListener('click', () => {
 		if (body.classList[0] == 'theme--dark') {
@@ -434,3 +432,108 @@ menuListItems.forEach(item => {
 		body.classList.toggle('disable-scroll');
 	});
 });
+
+// Contact Form Validation
+
+const contactName = document.querySelector('.contact__form__name');
+const contactEmail = document.querySelector('.contact__form__address');
+const contactMsg = document.querySelector('.contact__form__message');
+const contactForm = document.querySelector('.contact__form');
+
+const inputElms = [contactName, contactEmail, contactMsg];
+let isFormValid = false;
+let shouldValidate = false;
+
+const isValidEmail = email => {
+	const re =
+		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+};
+
+const validateNameInput = () => {
+	if (!shouldValidate) return;
+
+	contactName.nextElementSibling.textContent = 'Name';
+	contactEmail.nextElementSibling.textContent = 'Email';
+	contactMsg.nextElementSibling.textContent = 'Message';
+
+	if (!contactName.value) {
+		contactName.nextElementSibling.textContent = 'PLEASE ENTER YOUR NAME';
+	} else if (!contactEmail.value || !isValidEmail(contactEmail.value)) {
+		contactEmail.nextElementSibling.textContent = 'PLEASE ENTER A VALID EMAIL';
+	} else if (!contactMsg.value) {
+		contactMsg.nextElementSibling.textContent = 'PLEASE ENTER A MESSAGE';
+	} else {
+		isFormValid = true;
+	}
+};
+
+inputElms.forEach(elms => elms.addEventListener('input', validateNameInput));
+
+let tlResponse = gsap.timeline({
+	defaults: {
+		duration: 1,
+		ease: 'power4.easeInAndOut'
+	}
+});
+
+contactForm.addEventListener('submit', e => {
+	e.preventDefault();
+	shouldValidate = true;
+	validateNameInput();
+	if (isFormValid) {
+		tlResponse = gsap.timeline({
+			defaults: {
+				duration: 1,
+				ease: 'power4.easeInAndOut'
+			}
+		});
+		tlResponse
+			.to('.contact__response', {
+				autoAlpha: 1,
+				display: 'block',
+				x: 0
+			})
+			.to('.contact__response', {
+				delay: 4,
+				x: 1500
+			})
+			.to('.contact__response', {
+				duration: 0.1,
+				autoAlpha: 0,
+				display: 'none'
+			})
+			.from('.contact__form-wrapper', {
+				autoAlpha: 0,
+				display: 'none',
+				x: 0
+			});
+		shouldValidate = false;
+		isFormValid = false;
+		handleSubmit(e);
+	}
+});
+
+async function handleSubmit(event) {
+	let resHeading = document.querySelector('.contact__response__heading');
+	let resText = document.querySelector('.contact__response__text');
+	var data = new FormData(event.target);
+	fetch(event.target.action, {
+		method: contactForm.method,
+		body: data,
+		headers: {
+			Accept: 'application/json'
+		}
+	})
+		.then(response => {
+			resHeading.textContent = 'Thank you!';
+			resText.textContent =
+				'Your message has been sent. Will get back to you as soon as possible';
+			inputElms.forEach(elms => (elms.value = ''));
+		})
+		.catch(error => {
+			resHeading.textContent = 'Oops!';
+			resText.textContent =
+				'An error has occurred and your message has not been sent successfully. Please try again in a few minutes.';
+		});
+}

@@ -18,6 +18,7 @@
 		}
 	}
 	&__content-wrapper {
+		position: relative;
 		width: 100%;
 		@include flex-display(flex, flex-start, space-between);
 		@include mQ('l') {
@@ -131,6 +132,28 @@
 		}
 		@include mQ('s') {
 			font-size: 1.4em;
+		}
+	}
+	&__response {
+		display: none;
+		transform: translateX(1500px);
+		&__heading {
+			margin-bottom: 1.5em;
+			@include mQ('l') {
+				font-size: 1.75em;
+				margin-bottom: 0.75em;
+			}
+			@include mQ('s') {
+				font-size: 1.5em;
+			}
+		}
+		&__text {
+			@include mQ('l') {
+				font-size: 1.1em;
+			}
+			@include mQ('s') {
+				font-size: 0.95em;
+			}
 		}
 	}
 }

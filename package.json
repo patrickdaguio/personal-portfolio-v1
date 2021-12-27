@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "parcel src/index.html",
-		"build": "parcel src public/index.html"
+		"build": "parcel build src/index.html"
 	},
 	"author": "Patrick Daguio patrickdaguio@outlook.com",
 	"license": "ISC",
@@ -15,5 +15,8 @@
 	},
 	"devDependencies": {
 		"sass": "^1.43.4"
-	}
+	},
+	"browserslist": [
+		"since 2017-06"
+	]
 }
