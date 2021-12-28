@@ -29,8 +29,10 @@
 		display: block;
 		width: 100%;
 		padding: 0.25em 0em;
-		border: none;
+		border: 0;
 		background: none;
+		border-radius: 0;
+		appearance: none;
 		@include font-source($base-font-family, 1em, $base-font-weight, $text);
 		outline: none;
 		@include mQ('s') {

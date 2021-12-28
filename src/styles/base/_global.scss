@@ -4,11 +4,12 @@ html {
 
 body {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	transition: 0.5s;
 	font-family: $base-font-family;
 	background-color: $dark-bg;
 	overflow-x: hidden;
+	overflow-y: scroll;
 	&::-webkit-scrollbar {
 		width: 16px;
 	}
